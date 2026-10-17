@@ -1,5 +1,22 @@
 # Changelog / Cambios
 
+## 0.1.1-alpha
+
+**English**
+
+- Fixed: touching a shooting enemy now kills, like the walking enemies
+  (before, the player went through it).
+- `MODDING.txt`: clearer first step to make a pack (copy the `original`
+  folder inside `resourcepacks`, not the `resourcepacks` folder).
+
+**Español**
+
+- Arreglado: tocar a un enemigo que dispara ahora mata, como los enemigos
+  que andan (antes el jugador lo atravesaba).
+- `MODDING.txt`: el primer paso para crear un paquete está más claro
+  (copiar la carpeta `original` dentro de `resourcepacks`, no la carpeta
+  `resourcepacks`).
+
 ## 0.1.0-alpha
 
 **English**
