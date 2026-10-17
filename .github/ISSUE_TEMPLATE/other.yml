@@ -1,0 +1,12 @@
+name: "Other / Otra cosa"
+description: "A question, or anything that isn't a bug or an idea / Una pregunta, o algo que no es un fallo ni una idea"
+title: "[other] "
+labels: ["question"]
+body:
+  - type: textarea
+    id: text
+    attributes:
+      label: "Tell us / Cuéntanos"
+      description: "Write in English or in Spanish / Escribe en inglés o en español"
+    validations:
+      required: true

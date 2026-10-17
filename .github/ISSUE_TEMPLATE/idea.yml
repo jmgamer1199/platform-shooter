@@ -1,0 +1,26 @@
+name: "Idea"
+description: "An idea for the game / Una idea para el juego"
+title: "[idea] "
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for the idea! Write in English or in Spanish.
+        ¡Gracias por la idea! Escribe en inglés o en español.
+  - type: textarea
+    id: idea
+    attributes:
+      label: "Your idea / Tu idea"
+      description: "What you would add or change / Qué añadirías o cambiarías"
+    validations:
+      required: true
+  - type: textarea
+    id: why
+    attributes:
+      label: "Why it would be good / Por qué estaría bien"
+  - type: textarea
+    id: more
+    attributes:
+      label: "Anything else / Algo más"
+      description: "Drawings, examples, other games that do it... / Dibujos, ejemplos, otros juegos que lo hacen..."

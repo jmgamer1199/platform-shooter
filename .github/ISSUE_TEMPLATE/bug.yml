@@ -1,0 +1,66 @@
+name: "Bug / Fallo"
+description: "Something doesn't work, or works wrong / Algo no funciona o funciona mal"
+title: "[bug] "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for reporting it! Write in English or in Spanish.
+        ¡Gracias por avisar! Escribe en inglés o en español.
+  - type: textarea
+    id: what
+    attributes:
+      label: "What happens? / ¿Qué pasa?"
+      description: "What you see, and what you expected to see / Lo que ves, y lo que esperabas ver"
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: "How to make it happen / Cómo hacer que pase"
+      description: "Level, menu, buttons you pressed... / Nivel, menú, botones que pulsaste..."
+      placeholder: |
+        1.
+        2.
+        3.
+    validations:
+      required: true
+  - type: dropdown
+    id: device
+    attributes:
+      label: "Where do you play? / ¿Dónde juegas?"
+      options:
+        - PSP-1000
+        - PSP-2000
+        - PSP-3000
+        - PSP Go
+        - PSP Street (E1000)
+        - PPSSPP (PC)
+        - PPSSPP (Android / iOS)
+        - Other / Otro
+    validations:
+      required: true
+  - type: input
+    id: firmware
+    attributes:
+      label: "Firmware or emulator version / Versión del firmware o del emulador"
+      placeholder: "6.61 ARK-4, PPSSPP 1.18..."
+  - type: input
+    id: version
+    attributes:
+      label: "Game version / Versión del juego"
+      description: "It is in the title of the game in the PSP menu / Está en el título del juego en el menú de la PSP"
+      placeholder: "0.1.0-alpha"
+    validations:
+      required: true
+  - type: textarea
+    id: packs
+    attributes:
+      label: "Packs turned on / Paquetes activados"
+      description: "The texture packs you have on, if any / Los paquetes de texturas que tengas activados, si hay"
+  - type: textarea
+    id: more
+    attributes:
+      label: "Anything else / Algo más"
+      description: "Screenshots, videos... / Capturas, vídeos..."
