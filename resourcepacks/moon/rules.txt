@@ -1,0 +1,23 @@
+# platform-shooter - rules / reglas (Moon Mode / Modo Luna)
+# On the Moon you fall slowly: jumps float and go higher (about 150
+# pixels instead of 120), so the jump is a bit weaker to keep it fair.
+# The space suit takes 3 laser hits.
+# En la Luna se cae despacio: los saltos flotan y suben mas (unos 150
+# pixeles en vez de 120), asi que el salto es algo mas flojo.
+# El traje espacial aguanta 3 disparos laser.
+# See / ver MODDING.txt
+
+# How fast the player falls / lo rapido que cae el jugador (0.1 - 5)
+gravity = 0.5
+
+# Jump strength / fuerza del salto (1 - 30)
+jump = 12
+
+# Bullets the player can take / balas que aguanta el jugador (1 - 99)
+life = 3
+
+# The rest stay as in the game / el resto se quedan como en el juego
+#speed = 5
+#enemy_speed = 3
+#enemy_life = 1
+#fire_rate = 3

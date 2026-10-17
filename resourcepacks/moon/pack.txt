@@ -1,0 +1,17 @@
+# platform-shooter - resource pack / paquete de recursos
+# Moon Mode / Modo Luna, by ericpastorm (made with Claude Code)
+#
+# Based on platform-shooter by jmgamer1199 (CC BY-NC 4.0).
+# What it changes: the player is jmgamer1199's drawing with a space suit
+# and a helmet; the other pictures, the two sounds and levels 7, 8 and 9
+# are new; rules.txt sets the gravity of the Moon.
+# Basado en platform-shooter de jmgamer1199 (CC BY-NC 4.0).
+# Que cambia: el jugador es el dibujo de jmgamer1199 con traje espacial y
+# casco; los demas dibujos, los dos sonidos y los niveles 7, 8 y 9 son
+# nuevos; rules.txt pone la gravedad de la Luna.
+# See / ver MODDING.txt
+
+format = 1
+name = Moon Mode / Modo Luna
+description = Low gravity, aliens and 3 new levels / Poca gravedad, aliens y 3 niveles
+pixelated = no

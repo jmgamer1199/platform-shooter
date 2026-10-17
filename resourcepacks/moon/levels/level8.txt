@@ -1,0 +1,21 @@
+# platform-shooter - level 8 / nivel 8 (Moon Mode / Modo Luna)
+# Asteroid steps / Escalones de asteroides
+# One line per object / una linea por objeto:  name x y [scale_x scale_y [angle]]
+# See / ver MODDING.txt
+
+background = background_level8.png
+shooting = no
+
+player 32 300
+wall 0 416 20 2
+wall 128 304 3 1
+wall 288 224 3 1
+wall 448 144 3 1
+wall 576 112 2 1
+flag 588 16 1.4 1.6
+enemy 608 384
+enemy 480 384
+wheel 240 400 1.5 1.5
+wall -32 -32 1 16
+wall 0 -32 21 1
+wall 640 0 1 15

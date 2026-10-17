@@ -1,0 +1,20 @@
+# platform-shooter - level 7 / nivel 7 (Moon Mode / Modo Luna)
+# Craters: the first moon jumps / Crateres: los primeros saltos lunares
+# One line per object / una linea por objeto:  name x y [scale_x scale_y [angle]]
+# See / ver MODDING.txt
+
+background = background_level7.png
+shooting = no
+text = Moon gravity! Jump and float\n¡Gravedad lunar! Salta y flota
+
+player 48 300
+wall 0 416 7 2
+wheel 272 470 1.5 1.5
+wall 320 416 10 2
+wall 320 352 2 2
+enemy 576 384
+wall 480 288 5 1
+flag 560 128 2.4 2.6666667
+wall -32 -32 1 16
+wall 0 -32 21 1
+wall 640 0 1 15

@@ -1,0 +1,20 @@
+# platform-shooter - level 9 / nivel 9 (Moon Mode / Modo Luna)
+# Alien base: defeat the aliens to open the rocket
+# Base alien: derrota a los aliens para abrir el cohete
+# One line per object / una linea por objeto:  name x y [scale_x scale_y [angle]]
+# See / ver MODDING.txt
+
+background = background_level9.png
+shooting = yes
+text = Alien base! Defeat the aliens\n¡Base alien! Derrota a los aliens
+text_exit = Exit open! Get to the rocket\n¡Salida abierta! Ve al cohete
+
+player 32 292
+wall -3 368 20.0625 3.4375
+shooter 288 224 3 3
+shooter 432 224 3 3
+wall 512 288 4 2.5
+flag 556 128 2.4 2.6666667
+wall 638 0 0.96875 11.46875
+wall -34 -3 1.125 11.8064518
+wall -2 -30 20.375 1
