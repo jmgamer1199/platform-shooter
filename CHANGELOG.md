@@ -1,5 +1,52 @@
 # Changelog / Cambios
 
+## 0.2.0-alpha
+
+**English**
+
+- Pack info: `pack.txt` can say the author of the pack (`author`), its
+  version (`version`, raise it with each update) and the version of the
+  game it was made with (`game_version`). OPTIONS > TEXTURE PACKS shows
+  the version next to the name, and △ shows all three.
+- Splashes like Minecraft's: the title screen phrases are now the same in
+  every language, in `splashes.txt` of the `original` pack (one phrase per
+  line). A pack can change them with its own `splashes.txt`; △ shows how
+  many phrases it has. The language files no longer have phrases.
+- Faster TEXTURE PACKS screen: it shows at once and checks the packs in
+  the background ("Checking..." until each one is done), opening each
+  file once at most (half the files of before), and it remembers the
+  checks until the game is restarted. Before, it could take about 13
+  seconds on a PSP-3000 with 3 packs.
+- Up to 8 packs can be on at once; turning on one more says so.
+- Up to 16 packs are listed (it was 32). With more, the game keeps the
+  active ones and `original`, then the rest by name, and says how many
+  are left out (before, which ones were left out was random).
+- Tested on a PSP-1000.
+
+**Español**
+
+- Datos de los paquetes: `pack.txt` puede decir el autor del paquete
+  (`author`), su versión (`version`, súbela con cada actualización) y la
+  versión del juego con la que se hizo (`game_version`). OPCIONES >
+  PAQUETES DE TEXTURAS muestra la versión junto al nombre, y △ muestra las
+  tres.
+- Frases como las de Minecraft: las frases de la pantalla de inicio ahora
+  son las mismas en todos los idiomas, en el `splashes.txt` del paquete
+  `original` (una frase por línea). Un paquete puede cambiarlas con su
+  propio `splashes.txt`; △ muestra cuántas frases tiene. Los archivos de
+  idioma ya no tienen frases.
+- Pantalla de PAQUETES DE TEXTURAS más rápida: sale al momento y revisa
+  los paquetes en segundo plano ("Comprobando..." hasta que acaba cada
+  uno), abriendo cada archivo una vez como mucho (la mitad de archivos que
+  antes), y recuerda las revisiones hasta que se reinicia el juego. Antes
+  podía tardar unos 13 segundos en una PSP-3000 con 3 paquetes.
+- Puede haber hasta 8 paquetes activados a la vez; al activar uno más, lo
+  avisa.
+- Se muestran hasta 16 paquetes (antes 32). Si hay más, el juego se queda
+  con los activos y con `original`, luego con el resto por nombre, y dice
+  cuántos quedan fuera (antes, cuáles se quedaban fuera era al azar).
+- Probado en una PSP-1000.
+
 ## 0.1.1-alpha
 
 **English**
