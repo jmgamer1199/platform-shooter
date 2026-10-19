@@ -46,7 +46,7 @@ from *Game > Memory Stick*.
 
 | Button | In the game | In the menus |
 |---|---|---|
-| D-pad / stick | move | choose |
+| D-pad / stick | move | choose (hold to keep moving) |
 | X | jump | accept |
 | R | shoot (from level 6, hold for 3 shots per second) | lower a pack's priority |
 | L | | raise a pack's priority |
@@ -63,6 +63,11 @@ from *Game > Memory Stick*.
   (WAV) of the game, change the levels or add new ones (simple text files),
   several packs at once with priorities. Packs use the same format on every
   port of the game, and the game tells you what is wrong in a pack.
+- In the packs, **levels drawn as a map** with letters (no coordinates),
+  **new enemies** built from pieces (how they move, shoot, split, phases
+  for bosses...) and separate pictures for the ground, the platforms and
+  the walls. The game itself doesn't come with new levels or enemies:
+  these are for the packs.
 - **Rules** in the packs: change the life, the jump, the gravity, the
   speeds and the fire rate to make an easy mode, a moon mode...
 - Language and packs are remembered.
@@ -76,13 +81,15 @@ How to make packs, levels and rules, add languages or change the font:
 all the pictures (the player, the enemies, the wheel, the flag, the walls,
 the bullets and the backgrounds, including the drawings of the player
 shooting, which the original didn't use), the sounds, levels 1 to 5, and
-how the game plays: movement, jumps, enemies, collisions and menus.
+how the game plays: movement, jumps, enemies, collisions and menus. The
+ground and the platforms use, for now, the original wall picture.
 
 **Made with AI for the PSP port**, directed by jmgamer1199:
 - all the code of the port: the game rewritten in C for the PSP from the
   original GameMaker code, plus its tools and tests;
 - level 6 and the shooting;
-- the texture packs, the levels in files, the rules and the warnings;
+- the texture packs, the levels in files and drawn as maps, the enemies
+  of the packs (built from pieces), the rules and the warnings;
 - the languages and their texts (menus, tutorials and title screen
   phrases), the debug mode and the 60 FPS drawing;
 - the provisional pictures: the icon and background of the PSP menu, the
@@ -153,7 +160,7 @@ carpeta `platform-shooter` en `PSP/GAME/` de la Memory Stick y ábrelo desde
 
 | Botón | En el juego | En los menús |
 |---|---|---|
-| Cruceta / stick | moverse | elegir |
+| Cruceta / stick | moverse | elegir (mantén para seguir moviendo) |
 | X | saltar | aceptar |
 | R | disparar (desde el nivel 6; mantenlo para 3 disparos por segundo) | bajar la prioridad de un paquete |
 | L | | subir la prioridad de un paquete |
@@ -171,6 +178,11 @@ carpeta `platform-shooter` en `PSP/GAME/` de la Memory Stick y ábrelo desde
   (archivos de texto sencillos), varios paquetes a la vez con prioridades.
   Los paquetes usan el mismo formato en todos los ports del juego, y el
   juego te dice qué tiene mal un paquete.
+- En los paquetes, **niveles dibujados como un mapa** con letras (sin
+  coordenadas), **enemigos nuevos** montados con piezas (cómo se mueven,
+  disparan, se dividen, fases para jefes...) y dibujos distintos para el
+  suelo, las plataformas y las paredes. El juego en sí no trae niveles ni
+  enemigos nuevos: son para los paquetes.
 - **Reglas** en los paquetes: cambia la vida, el salto, la gravedad, las
   velocidades y la cadencia de disparo para hacer un modo fácil, un modo
   luna...
@@ -185,14 +197,16 @@ Cómo hacer paquetes, niveles y reglas, añadir idiomas o cambiar la fuente:
 los dibujos (el jugador, los enemigos, la rueda, la bandera, las paredes,
 las balas y los fondos, también los del jugador disparando, que el
 original no usaba), los sonidos, los niveles 1 a 5, y cómo se juega:
-movimiento, saltos, enemigos, colisiones y menús.
+movimiento, saltos, enemigos, colisiones y menús. El suelo y las
+plataformas usan, de momento, el dibujo de pared original.
 
 **Hecho con IA para el port de PSP**, bajo la dirección de jmgamer1199:
 - todo el código del port: el juego reescrito en C para la PSP a partir
   del código original de GameMaker, y sus herramientas y pruebas;
 - el nivel 6 y el disparo;
-- los paquetes de texturas, los niveles en archivos, las reglas y los
-  avisos;
+- los paquetes de texturas, los niveles en archivos y dibujados como
+  mapa, los enemigos de los paquetes (montados con piezas), las reglas y
+  los avisos;
 - los idiomas y sus textos (menús, tutoriales y frases de la pantalla de
   inicio), el modo debug y el dibujado a 60 FPS;
 - los dibujos provisionales: el icono y el fondo del menú de la PSP, los
