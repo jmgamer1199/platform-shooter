@@ -2,6 +2,8 @@
 
 **English** | [Español](#español)
 
+> 🗺️ **[Roadmap](ROADMAP.md)**: what's coming next · lo que viene
+
 Native PlayStation Portable port of **platform-shooter**, a platform game
 by **jmgamer1199**, first made with GameMaker in 2017. Written in C for the
 PSP, it does not emulate anything. It works on the **PSP-1000, PSP-2000
@@ -81,6 +83,9 @@ from *Game > Memory Stick*.
 - **Rules** in the packs: change the life, the jump, the gravity, the
   speeds and the fire rate to make an easy mode, a moon mode...
 - Language and packs are remembered.
+
+**Next:** a camera and levels bigger than the screen (0.5.0). See the
+[Roadmap](ROADMAP.md).
 
 How to make packs, levels and rules, add languages or change the font:
 `MODDING.txt` inside the game folder.
@@ -212,6 +217,9 @@ carpeta `platform-shooter` en `PSP/GAME/` de la Memory Stick y ábrelo desde
   velocidades y la cadencia de disparo para hacer un modo fácil, un modo
   luna...
 - El idioma y los paquetes se recuerdan.
+
+**Lo próximo:** una cámara y niveles más grandes que la pantalla (0.5.0).
+Mira el [Roadmap](ROADMAP.md).
 
 Cómo hacer paquetes, niveles y reglas, añadir idiomas o cambiar la fuente:
 `MODDING.txt` en la carpeta del juego.
