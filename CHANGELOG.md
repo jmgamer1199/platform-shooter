@@ -1,5 +1,117 @@
 # Changelog / Cambios
 
+## 0.4.0-alpha
+
+**English**
+
+New:
+
+- NPCs in the packs: characters the player can talk to, made like the
+  packs' enemies (`npcs/<name>/npc.txt` and a picture) and placed with
+  their letter in the maps. They are harmless. The player talks to them
+  with Triangle (a △ appears over them), or they talk when touched (for
+  signs). The ones that stand still look at the player.
+- Dialogs: what the NPCs say goes in one file per language
+  (`dialog_en.txt`, `dialog_es.txt`...), with conversations of several
+  lines, the name of who speaks, and answers to choose that lead to other
+  parts. A pack can change the dialog box with `textures/dialog.png`.
+  `MODDING.txt` explains it with examples. Format 3.
+- Two sample packs come with the game, off at first: *Sample: The village*
+  (characters and dialogs, 3 levels) and *Sample: Monster gallery* (9 new
+  enemies and a boss, 4 levels). Each one changes every picture and sound
+  of the game and is played with its own levels. They are made with AI,
+  only to show what packs can do: they are not part of the original game.
+- `own_levels = yes` in a pack's `pack.txt`: only the packs' levels are
+  played, not the game's.
+- `MODDING.txt` explains how to make the animations of the enemies and
+  NPCs, and how big a pack's enemy must be for the player's bullets to
+  hit it (1.5 squares on the ground).
+- Up to 24 enemies and NPCs among the active packs (before, 16 enemies).
+- △ on the TEXTURE PACKS screen also checks the NPCs and the dialog
+  files: a folder without `npc.txt`, a missing conversation, a line it
+  doesn't understand, an answer to a section that isn't there, an NPC
+  with an enemy's name, and `own_levels` without a `level1.txt`.
+- Options for the objects of a level: a flag can hide until the shooting
+  enemies are defeated (`hide`), and a shooting enemy (or a pack's enemy
+  that shoots) can be told not to shoot (`no_shoot`). They go after the
+  object's numbers, e.g. `flag 529 209 2 2 hide`. Packs that use them say
+  `format = 3`.
+- By default a flag no longer hides: in the packs' levels with shooting,
+  the flag is there from the start unless it has `hide`. The original
+  level 6 keeps its flag hidden until both shooting enemies are defeated,
+  as always, and so do the packs made for 0.3.0 (format 1 or 2).
+- A pack's enemy that shoots `around` can say how many bullets each shot
+  has: `bullets = 12` (2 to 16, evenly spread; 8 without it, as before).
+  Format 3.
+- A pack can say what it is in its `pack.txt`: `type = mod` makes it a
+  mod, which can only be turned on or off from the main menu (not from
+  the pause), even if it only has pictures. `type = textures`, or no
+  line, works as before.
+
+Fixed bugs:
+
+- A pack's level named with a 0 in front (`level07.txt`) was shown as
+  fine on the TEXTURE PACKS screen, but the game never loaded it. Now △
+  says it must be called `level7.txt`.
+
+**Español**
+
+Novedades:
+
+- NPC en los paquetes: personajes con los que el jugador puede hablar,
+  hechos como los enemigos de los paquetes (`npcs/<nombre>/npc.txt` y un
+  dibujo) y puestos con su letra en los mapas. Son inofensivos. Se les
+  habla con Triángulo (les sale un △ encima), o hablan al tocarlos (para
+  carteles). Los que están quietos miran al jugador.
+- Diálogos: lo que dicen los NPC va en un archivo por idioma
+  (`dialog_en.txt`, `dialog_es.txt`...), con conversaciones de varias
+  frases, el nombre de quien habla y respuestas para elegir que llevan a
+  otras partes. Un paquete puede cambiar el cuadro de diálogo con
+  `textures/dialog.png`. `MODDING.txt` lo explica con ejemplos.
+  Formato 3.
+- Con el juego vienen dos paquetes de ejemplo, desactivados al principio:
+  *Ejemplo: El pueblo* (personajes y diálogos, 3 niveles) y *Ejemplo:
+  Galería de monstruos* (9 enemigos nuevos y un jefe, 4 niveles). Cada uno
+  cambia todos los dibujos y sonidos del juego y se juega con sus propios
+  niveles. Están hechos con IA, solo para enseñar lo que pueden hacer los
+  paquetes: no son parte del juego original.
+- `own_levels = yes` en el `pack.txt` de un paquete: solo se juegan los
+  niveles de los paquetes, no los del juego.
+- `MODDING.txt` explica cómo hacer las animaciones de los enemigos y los
+  NPC, y lo grande que tiene que ser un enemigo de un paquete para que le
+  den las balas del jugador (1,5 casillas en el suelo).
+- Hasta 24 enemigos y NPC entre los paquetes activos (antes, 16
+  enemigos).
+- △ en la pantalla PAQUETES DE TEXTURAS también revisa los NPC y los
+  archivos de diálogos: una carpeta sin `npc.txt`, una conversación que
+  falta, una línea que no se entiende, una respuesta a una sección que no
+  está, un NPC con el nombre de un enemigo, y `own_levels` sin un
+  `level1.txt`.
+- Opciones para los objetos de un nivel: una bandera puede esconderse
+  hasta eliminar a los enemigos que disparan (`hide`), y a un enemigo que
+  dispara (o a uno del paquete que dispara) se le puede decir que no
+  dispare (`no_shoot`). Van después de los números del objeto, por
+  ejemplo `flag 529 209 2 2 hide`. Los paquetes que las usan dicen
+  `format = 3`.
+- Por defecto la bandera ya no se esconde: en los niveles con disparo de
+  los paquetes, la bandera está desde el principio si no tiene `hide`. El
+  nivel 6 original sigue escondiendo su bandera hasta eliminar a los dos
+  enemigos que disparan, como siempre, y también los paquetes hechos
+  para la 0.3.0 (formato 1 o 2).
+- Un enemigo de un paquete que dispara `around` (alrededor) puede decir
+  cuántas balas tiene cada disparo: `bullets = 12` o `balas = 12` (de 2 a
+  16, repartidas por igual; sin ponerlo, 8, como antes). Formato 3.
+- Un paquete puede decir qué es en su `pack.txt`: `type = mod` (o
+  `tipo = mod`) lo hace un mod, que solo se activa o desactiva desde el
+  menú principal (no desde la pausa), aunque solo tenga dibujos.
+  `type = textures`, o sin la línea, funciona como antes.
+
+Bugs solucionados:
+
+- Un nivel de un paquete con un 0 delante en el nombre (`level07.txt`)
+  salía bien en la pantalla PAQUETES DE TEXTURAS, pero el juego nunca lo
+  cargaba. Ahora △ avisa de que se tiene que llamar `level7.txt`.
+
 ## 0.3.0-alpha
 
 **English**

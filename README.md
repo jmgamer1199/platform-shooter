@@ -50,7 +50,7 @@ from *Game > Memory Stick*.
 | X | jump | accept |
 | R | shoot (from level 6, hold for 3 shots per second) | lower a pack's priority |
 | L | | raise a pack's priority |
-| Triangle | | details and warnings of a pack |
+| Triangle | talk to a character (in the packs' levels) | details and warnings of a pack |
 | O | | back |
 | Start | pause | |
 | Select | debug mode (FPS, memory, collision boxes) | debug mode |
@@ -68,6 +68,16 @@ from *Game > Memory Stick*.
   for bosses...) and separate pictures for the ground, the platforms and
   the walls. The game itself doesn't come with new levels or enemies:
   these are for the packs.
+- **Characters (NPCs) and dialogs** in the packs: people and signs to talk
+  to, with conversations in each language and answers to choose.
+- **Two sample packs**, off at first: *Sample: The village* (characters and
+  dialogs, 3 levels) and *Sample: Monster gallery* (9 new enemies and a
+  boss, 4 levels). Each one changes every picture and sound and has its own
+  levels. They are **made with AI, only to show what packs can do**: they
+  are not part of the original game. Turn one on in OPTIONS > TEXTURE
+  PACKS and press PLAY.
+- A pack can say if it is a **mod** (it changes the game: only from the
+  main menu) or just a **texture pack** (also from the pause).
 - **Rules** in the packs: change the life, the jump, the gravity, the
   speeds and the fire rate to make an easy mode, a moon mode...
 - Language and packs are remembered.
@@ -89,13 +99,16 @@ ground and the platforms use, for now, the original wall picture.
   original GameMaker code, plus its tools and tests;
 - level 6 and the shooting;
 - the texture packs, the levels in files and drawn as maps, the enemies
-  of the packs (built from pieces), the rules and the warnings;
+  of the packs (built from pieces), the characters (NPCs) and dialogs of
+  the packs, the rules and the warnings;
 - the languages and their texts (menus, tutorials and title screen
   phrases), the debug mode and the 60 FPS drawing;
 - the provisional pictures: the icon and background of the PSP menu, the
   button symbols, the icon of the template pack and the new buttons drawn
   on the menus (the gear and TEXTURE PACKS). The menu backgrounds are the
   original ones, with their painted text removed;
+- the two sample packs (sample_village and sample_monsters): their
+  levels, characters, enemies, texts and pictures;
 - these documents.
 
 **From others**: the Lilita One font (Juan Montoreano, SIL Open Font
@@ -164,7 +177,7 @@ carpeta `platform-shooter` en `PSP/GAME/` de la Memory Stick y ábrelo desde
 | X | saltar | aceptar |
 | R | disparar (desde el nivel 6; mantenlo para 3 disparos por segundo) | bajar la prioridad de un paquete |
 | L | | subir la prioridad de un paquete |
-| Triángulo | | detalles y avisos de un paquete |
+| Triángulo | hablar con un personaje (en los niveles de los paquetes) | detalles y avisos de un paquete |
 | O | | atrás |
 | Start | pausa | |
 | Select | modo debug (FPS, memoria, cajas de colisión) | modo debug |
@@ -183,6 +196,18 @@ carpeta `platform-shooter` en `PSP/GAME/` de la Memory Stick y ábrelo desde
   disparan, se dividen, fases para jefes...) y dibujos distintos para el
   suelo, las plataformas y las paredes. El juego en sí no trae niveles ni
   enemigos nuevos: son para los paquetes.
+- **Personajes (NPC) y diálogos** en los paquetes: gente y carteles con los
+  que hablar, con conversaciones en cada idioma y respuestas para elegir.
+- **Dos paquetes de ejemplo**, desactivados al principio: *Ejemplo: El
+  pueblo* (personajes y diálogos, 3 niveles) y *Ejemplo: Galería de
+  monstruos* (9 enemigos nuevos y un jefe, 4 niveles). Están **hechos con
+  IA, solo para enseñar lo que pueden hacer los paquetes**: no son parte
+  del juego original. Cada uno cambia todos los dibujos y sonidos y tiene
+  sus propios niveles. Activa uno en OPCIONES > PAQUETES DE TEXTURAS y
+  pulsa JUGAR.
+- Un paquete puede decir si es un **mod** (cambia el juego: solo desde el
+  menú principal) o solo un **paquete de texturas** (también desde la
+  pausa).
 - **Reglas** en los paquetes: cambia la vida, el salto, la gravedad, las
   velocidades y la cadencia de disparo para hacer un modo fácil, un modo
   luna...
@@ -205,7 +230,8 @@ plataformas usan, de momento, el dibujo de pared original.
   del código original de GameMaker, y sus herramientas y pruebas;
 - el nivel 6 y el disparo;
 - los paquetes de texturas, los niveles en archivos y dibujados como
-  mapa, los enemigos de los paquetes (montados con piezas), las reglas y
+  mapa, los enemigos de los paquetes (montados con piezas), los
+  personajes (NPC) y diálogos de los paquetes, las reglas y
   los avisos;
 - los idiomas y sus textos (menús, tutoriales y frases de la pantalla de
   inicio), el modo debug y el dibujado a 60 FPS;
@@ -213,6 +239,8 @@ plataformas usan, de momento, el dibujo de pared original.
   símbolos de los botones, el icono del paquete plantilla y los botones
   nuevos dibujados en los menús (el engranaje y PAQUETES DE TEXTURAS). Los
   fondos de los menús son los originales, con su texto pintado borrado;
+- los dos paquetes de ejemplo (sample_village y sample_monsters): sus
+  niveles, personajes, enemigos, textos y dibujos;
 - estos documentos.
 
 **De otros**: la fuente Lilita One (Juan Montoreano, SIL Open Font
