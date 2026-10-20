@@ -27,9 +27,12 @@ Everything that changed, version by version: [CHANGELOG](CHANGELOG.md).
 
 ---
 
-## 📋 0.5.0 — Camera and long levels
+## 🔨 0.5.0 — Camera and long levels *(in development)*
 
-- Pack levels bigger than the screen, with a camera that follows the player.
+- Pack levels up to 5 screens wide and 4 screens tall.
+- A camera that follows the player, like in the classic platformers.
+- Backgrounds that move slower than the level (parallax), for depth.
+- More objects in each level; what is off the screen isn't drawn.
 - All the texts of a pack in one place, in every language.
 - The original levels stay as they are.
 
@@ -95,10 +98,14 @@ Todo lo que cambió, versión a versión: [CHANGELOG](CHANGELOG.md).
 
 ---
 
-### 📋 0.5.0 — Cámara y niveles largos
+### 🔨 0.5.0 — Cámara y niveles largos *(en desarrollo)*
 
-- Niveles de los paquetes más grandes que la pantalla, con una cámara que
-  sigue al jugador.
+- Niveles de los paquetes de hasta 5 pantallas de ancho y 4 de alto.
+- Una cámara que sigue al jugador, como en los plataformas clásicos.
+- Fondos que se mueven más despacio que el nivel (parallax), para dar
+  profundidad.
+- Más objetos en cada nivel; lo que queda fuera de la pantalla no se
+  dibuja.
 - Todos los textos de un paquete en un mismo sitio, en cada idioma.
 - Los niveles originales se quedan como están.
 
