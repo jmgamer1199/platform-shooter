@@ -17,6 +17,7 @@ on any PSP.
 
 | Version | Highlights |
 |---|---|
+| [0.5.0-alpha](../../releases/tag/v0.5.0-alpha) | Big levels with a camera, all the texts in `texts/`, an automatic log |
 | [0.4.0-alpha](../../releases/tag/v0.4.0-alpha) | NPCs and dialogs, object options, two sample packs |
 | [0.3.0-alpha](../../releases/tag/v0.3.0-alpha) | Levels drawn as maps, enemies built from pieces |
 | [0.2.0-alpha](../../releases/tag/v0.2.0-alpha) | Pack details, title screen phrases, faster packs screen |
@@ -27,20 +28,12 @@ Everything that changed, version by version: [CHANGELOG](CHANGELOG.md).
 
 ---
 
-## 🔨 0.5.0 — Camera and long levels *(in development)*
-
-- Pack levels up to 5 screens wide and 4 screens tall.
-- A camera that follows the player, like in the classic platformers.
-- Backgrounds that move slower than the level (parallax), for depth.
-- More objects in each level; what is off the screen isn't drawn.
-- All the texts of a pack in one place, in every language.
-- The original levels stay as they are.
-
 ## 📋 0.5.1 — Menus
 
 - One texture for every button of the game, like Minecraft.
 - Menu backgrounds and icons apart from the buttons.
 - Volume control and button remapping in the options.
+- A faster texture packs screen.
 
 ## 📋 0.6.0 — Switches, keys and doors
 
@@ -88,6 +81,7 @@ asegurarse de que funcione en cualquier PSP.
 
 | Versión | Lo más destacado |
 |---|---|
+| [0.5.0-alpha](../../releases/tag/v0.5.0-alpha) | Niveles grandes con cámara, todos los textos en `texts/`, un registro automático |
 | [0.4.0-alpha](../../releases/tag/v0.4.0-alpha) | NPC y diálogos, opciones de los objetos, dos paquetes de ejemplo |
 | [0.3.0-alpha](../../releases/tag/v0.3.0-alpha) | Niveles dibujados como un mapa, enemigos montados con piezas |
 | [0.2.0-alpha](../../releases/tag/v0.2.0-alpha) | Datos de los paquetes, frases del título, pantalla de paquetes más rápida |
@@ -98,22 +92,12 @@ Todo lo que cambió, versión a versión: [CHANGELOG](CHANGELOG.md).
 
 ---
 
-### 🔨 0.5.0 — Cámara y niveles largos *(en desarrollo)*
-
-- Niveles de los paquetes de hasta 5 pantallas de ancho y 4 de alto.
-- Una cámara que sigue al jugador, como en los plataformas clásicos.
-- Fondos que se mueven más despacio que el nivel (parallax), para dar
-  profundidad.
-- Más objetos en cada nivel; lo que queda fuera de la pantalla no se
-  dibuja.
-- Todos los textos de un paquete en un mismo sitio, en cada idioma.
-- Los niveles originales se quedan como están.
-
 ### 📋 0.5.1 — Menús
 
 - Una sola textura para todos los botones del juego, como en Minecraft.
 - Los fondos de los menús y los iconos, aparte de los botones.
 - Control de volumen y cambiar los botones en las opciones.
+- Una pantalla de paquetes de texturas más rápida.
 
 ### 📋 0.6.0 — Interruptores, llaves y puertas
 

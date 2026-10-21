@@ -72,9 +72,13 @@ from *Game > Memory Stick*.
   these are for the packs.
 - **Characters (NPCs) and dialogs** in the packs: people and signs to talk
   to, with conversations in each language and answers to choose.
-- **Two sample packs**, off at first: *Sample: The village* (characters and
-  dialogs, 3 levels) and *Sample: Monster gallery* (9 new enemies and a
-  boss, 4 levels). Each one changes every picture and sound and has its own
+- **Big levels** in the packs, up to 100 squares wide and 60 tall, with a
+  camera that follows the player and backgrounds that move slower than
+  the level. All the texts of a pack (levels and conversations) in its
+  `texts/` folder, in each language.
+- **Two sample packs**, off at first: *0.5.0: The mountain* (big levels and
+  the camera, 3 levels) and *0.5.0: The caves* (many objects and a miner
+  to talk to, 3 levels). Each one changes every picture and sound and has its own
   levels. They are **made with AI, only to show what packs can do**: they
   are not part of the original game. Turn one on in OPTIONS > TEXTURE
   PACKS and press PLAY.
@@ -83,9 +87,11 @@ from *Game > Memory Stick*.
 - **Rules** in the packs: change the life, the jump, the gravity, the
   speeds and the fire rate to make an easy mode, a moon mode...
 - Language and packs are remembered.
+- A **log** of everything that happens (`log.txt`, next to `EBOOT.PBP`),
+  written on its own: send it with your bug reports.
 
-**Next:** a camera and levels bigger than the screen (0.5.0). See the
-[Roadmap](ROADMAP.md).
+**Next:** the menus, with one texture for all the buttons, a volume
+control and button remapping (0.5.1). See the [Roadmap](ROADMAP.md).
 
 How to make packs, levels and rules, add languages or change the font:
 `MODDING.txt` inside the game folder.
@@ -112,7 +118,7 @@ ground and the platforms use, for now, the original wall picture.
   button symbols, the icon of the template pack and the new buttons drawn
   on the menus (the gear and TEXTURE PACKS). The menu backgrounds are the
   original ones, with their painted text removed;
-- the two sample packs (sample_village and sample_monsters): their
+- the sample packs (sample_mountain and sample_caves): their
   levels, characters, enemies, texts and pictures;
 - these documents.
 
@@ -203,9 +209,13 @@ carpeta `platform-shooter` en `PSP/GAME/` de la Memory Stick y ábrelo desde
   enemigos nuevos: son para los paquetes.
 - **Personajes (NPC) y diálogos** en los paquetes: gente y carteles con los
   que hablar, con conversaciones en cada idioma y respuestas para elegir.
-- **Dos paquetes de ejemplo**, desactivados al principio: *Ejemplo: El
-  pueblo* (personajes y diálogos, 3 niveles) y *Ejemplo: Galería de
-  monstruos* (9 enemigos nuevos y un jefe, 4 niveles). Están **hechos con
+- **Niveles grandes** en los paquetes, de hasta 100 casillas de ancho y 60
+  de alto, con una cámara que sigue al jugador y fondos que se mueven más
+  despacio que el nivel. Todos los textos de un paquete (niveles y
+  conversaciones) en su carpeta `texts/`, en cada idioma.
+- **Dos paquetes de ejemplo**, desactivados al principio: *0.5.0: La
+  montaña* (niveles grandes y la cámara, 3 niveles) y *0.5.0: Las cuevas*
+  (muchos objetos y un minero con el que hablar, 3 niveles). Están **hechos con
   IA, solo para enseñar lo que pueden hacer los paquetes**: no son parte
   del juego original. Cada uno cambia todos los dibujos y sonidos y tiene
   sus propios niveles. Activa uno en OPCIONES > PAQUETES DE TEXTURAS y
@@ -217,9 +227,12 @@ carpeta `platform-shooter` en `PSP/GAME/` de la Memory Stick y ábrelo desde
   velocidades y la cadencia de disparo para hacer un modo fácil, un modo
   luna...
 - El idioma y los paquetes se recuerdan.
+- Un **registro (log)** de todo lo que pasa (`log.txt`, junto a
+  `EBOOT.PBP`), que se escribe solo: mándalo con tus avisos de fallos.
 
-**Lo próximo:** una cámara y niveles más grandes que la pantalla (0.5.0).
-Mira el [Roadmap](ROADMAP.md).
+**Lo próximo:** los menús, con una sola textura para todos los botones, un
+control de volumen y cambiar los botones (0.5.1). Mira el
+[Roadmap](ROADMAP.md).
 
 Cómo hacer paquetes, niveles y reglas, añadir idiomas o cambiar la fuente:
 `MODDING.txt` en la carpeta del juego.
@@ -247,7 +260,7 @@ plataformas usan, de momento, el dibujo de pared original.
   símbolos de los botones, el icono del paquete plantilla y los botones
   nuevos dibujados en los menús (el engranaje y PAQUETES DE TEXTURAS). Los
   fondos de los menús son los originales, con su texto pintado borrado;
-- los dos paquetes de ejemplo (sample_village y sample_monsters): sus
+- los paquetes de ejemplo (sample_mountain y sample_caves): sus
   niveles, personajes, enemigos, textos y dibujos;
 - estos documentos.
 

@@ -51,9 +51,26 @@ body:
     attributes:
       label: "Game version / Versión del juego"
       description: "It is in the title of the game in the PSP menu / Está en el título del juego en el menú de la PSP"
-      placeholder: "0.1.0-alpha"
+      placeholder: "0.5.0-alpha"
     validations:
       required: true
+  - type: textarea
+    id: log
+    attributes:
+      label: "The game's log (log.txt) / El registro del juego (log.txt)"
+      description: |
+        From version 0.5.0 on, the game writes everything that happens in log.txt, in its folder (PSP/GAME/.../platform-shooter/, next to EBOOT.PBP). Close the game with HOME after the bug, then drag log.txt into this box. If your version is older than 0.5.0, write "none".
+        Desde la versión 0.5.0, el juego apunta todo lo que pasa en log.txt, en su carpeta (PSP/GAME/.../platform-shooter/, junto a EBOOT.PBP). Cierra el juego con HOME después del fallo y arrastra log.txt a este cuadro. Si tu versión es anterior a la 0.5.0, escribe "none".
+      placeholder: "Drag log.txt here / Arrastra log.txt aquí"
+    validations:
+      required: true
+  - type: checkboxes
+    id: log_attached
+    attributes:
+      label: "The log / El registro"
+      options:
+        - label: "I attached log.txt (or my version is older than 0.5.0) / He adjuntado log.txt (o mi versión es anterior a la 0.5.0)"
+          required: true
   - type: textarea
     id: packs
     attributes:

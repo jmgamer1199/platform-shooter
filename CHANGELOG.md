@@ -1,5 +1,181 @@
 # Changelog / Cambios
 
+## 0.5.0-alpha
+
+**English**
+
+New:
+
+- Big levels: a pack's level drawn as a map can be up to 100 squares wide
+  and 60 tall (before, one screen: 20x15). The view is the same as always
+  and follows the player: a bit ahead of where it looks,
+  and up or down when it lands at another height. At the edge of a drop
+  it looks down, so you see where you would land before jumping, and it
+  goes on down with you while you fall.
+- In the big levels the background moves slower than the level
+  (parallax).
+- Up to 1000 objects per level (before, 200). What is outside the view
+  isn't drawn, so long levels don't slow the game down.
+- Every text of a pack goes in its folder `texts/`, one file per language
+  (`texts/en.txt`, `texts/es.txt`...): first the texts of the levels
+  (`WELCOME = Welcome!`, shown with `text = @WELCOME`), then the NPCs'
+  conversations. So a pack's level texts can be translated. The
+  `dialog_en.txt` files of 0.4.0 still work.
+- The texts of the original levels are now in
+  `resourcepacks/original/texts/`, like a pack's.
+- △ on the TEXTURE PACKS screen also checks the `texts/` files and warns
+  about a level's `@KEY` that isn't in them.
+- What a pack can use now depends on the version of the game it was
+  made with (`game_version` in its `pack.txt`): a pack made with a newer
+  version than the game shows up as INCOMPATIBLE and can't be turned on,
+  and the packs screen says when it uses things of a newer version than
+  the one it says (big levels and `texts/` need 0.5.0). The packs of
+  before, with `format = 1` to `3`, still work. `MODDING.txt` explains it.
+- A log of everything, automatic: from the moment the game starts it
+  writes `log.txt`, next to `EBOOT.PBP`, without doing anything. If
+  something goes wrong, send that file with your bug report. It has the
+  date and time, the version, the language and the packs, and on what the
+  game runs (the PPSSPP emulator, or the PSP model: 1000, 2000/3000/E1000
+  or Go); once a second the frames, the slowest one and its parts (logic,
+  drawing, GPU, waiting for the screen), the frames that missed the screen
+  and the GPU commands; the system (clock, battery, memory, firmware);
+  every key pressed and released; each level played (the file it comes
+  from, its size, every death with what killed the player and where, the
+  shots, whether it was completed and in how long, and a warning after 30
+  seconds without getting any further); the menu buttons, the pause, the
+  language, the packs turned on or off, the conversations and their
+  answers, and the enemies defeated. Each game starts a new `log.txt` (in
+  the save data folder, `PSP/SAVEDATA/PLATFORMSHOOTER`, if the game's
+  folder can't be written); it is written every 20 seconds by a thread of
+  its own, so the game never waits for the Memory Stick.
+- Two new sample packs made with AI, off at first: *0.5.0: The mountain*
+  (a valley 100 squares wide, a cliff 60 tall and a big summit: the camera
+  and the parallax) and *0.5.0: The caves* (a deep well, a mine full of
+  objects with a miner to talk to, and a hall with two golems that shoot,
+  to jump over or shoot down; every text in `texts/`). They replace the
+  0.4.0 ones (the village and the monsters): from now on each version
+  comes with its own sample packs.
+- In the big levels, the shooting enemies only shoot when they are near
+  the view.
+- Simpler collisions: everything collides with the rectangle of its
+  drawing (before, the player and the bullets used the exact shape of
+  their pictures, and the wheel turned its own). The player always rests
+  on its feet, and what touches what is easier to see. `MODDING.txt` has
+  the rectangle of each picture, to draw the packs' characters filling
+  it; the sample packs are drawn that way.
+
+Optimizations:
+
+- Collisions with the walls are much faster: the game only looks at the
+  walls near each object, and remembers the size of the ones that don't
+  move. A level full of enemies needs about 30 times less work, and the
+  original levels about 3 times less.
+- The backgrounds are drawn in narrow strips, as the PSP draws fastest:
+  a frame takes much less time in every level and menu.
+- The packs' texts are read with the levels, and their letters are made
+  then too: a conversation no longer stops the game for a moment, to read
+  the Memory Stick or to draw a letter it hadn't used yet.
+- Three screen buffers: the game draws into one while the display shows
+  another and the third waits, and the display itself changes them at
+  the vertical blank. Before, the next frame could start being drawn
+  while it was still on the screen, and part of the screen flickered.
+
+Fixed bugs:
+
+- On some emulators (PPSSPP on Android) LANGUAGE didn't change the
+  language: the game couldn't list the languages/ folder. Now it also
+  looks for its languages by their names (issue #4).
+
+**Español**
+
+Novedades:
+
+- Niveles grandes: un nivel de un paquete dibujado con mapa puede medir
+  hasta 100 casillas de ancho y 60 de alto (antes, una pantalla: 20x15).
+  La vista es la de siempre y sigue al jugador: un poco
+  por delante de donde mira, y hacia arriba o abajo cuando aterriza a
+  otra altura. Al borde de una caída mira hacia abajo, para que veas
+  dónde caerías antes de saltar, y sigue bajando contigo mientras caes.
+- En los niveles grandes el fondo se mueve más despacio que el nivel
+  (parallax).
+- Hasta 1000 objetos por nivel (antes, 200). Lo que está fuera de la
+  vista no se dibuja, así que los niveles largos no hacen ir más lento el
+  juego.
+- Todos los textos de un paquete van en su carpeta `texts/`, un archivo
+  por idioma (`texts/en.txt`, `texts/es.txt`...): primero los textos de
+  los niveles (`WELCOME = ¡Bienvenido!`, que se enseña con
+  `text = @WELCOME`), después las conversaciones de los NPC. Así los
+  textos de los niveles de un paquete se pueden traducir. Los archivos
+  `dialog_es.txt` de la 0.4.0 siguen valiendo.
+- Los textos de los niveles originales están ahora en
+  `resourcepacks/original/texts/`, como los de un paquete.
+- △ en la pantalla de PAQUETES DE TEXTURAS también comprueba los archivos
+  de `texts/` y avisa de la `@CLAVE` de un nivel que no está en ellos.
+- Lo que puede usar un paquete depende ahora de la versión del juego con
+  la que se hizo (`game_version` en su `pack.txt`): un paquete hecho con
+  una versión más nueva que el juego sale como INCOMPATIBLE y no se puede
+  activar, y la pantalla de paquetes avisa cuando usa cosas de una versión
+  más nueva que la que dice (los niveles grandes y `texts/` necesitan la
+  0.5.0). Los paquetes de antes, con `format = 1` a `3`, siguen valiendo.
+  `MODDING.txt` lo explica.
+- Un registro (log) de todo, automático: desde que arranca, el juego
+  escribe `log.txt`, junto a `EBOOT.PBP`, sin hacer nada. Si algo va mal,
+  manda ese archivo con tu aviso de fallo. Lleva la fecha y la hora, la
+  versión, el idioma y los paquetes, y en qué se juega (el emulador
+  PPSSPP, o el modelo de PSP: 1000, 2000/3000/E1000 o Go); cada segundo
+  los fotogramas, el más lento y sus partes (lógica, dibujo, GPU, espera a
+  la pantalla), los fotogramas que no llegaron a tiempo a la pantalla y
+  las órdenes de la GPU; el sistema (reloj, batería, memoria, firmware);
+  cada botón pulsado y soltado; cada nivel jugado (de qué archivo viene,
+  su tamaño, cada muerte con qué mató al jugador y dónde, los disparos, si
+  se completó y en cuánto tiempo, y un aviso tras 30 segundos sin
+  avanzar); los botones de los menús, la pausa, el idioma, los paquetes
+  activados o desactivados, las conversaciones y sus respuestas, y los
+  enemigos derrotados. Cada partida empieza un `log.txt` nuevo (en la
+  carpeta de partidas guardadas, `PSP/SAVEDATA/PLATFORMSHOOTER`, si no se
+  puede escribir en la del juego); se escribe cada 20 segundos con un hilo
+  propio, así que el juego nunca espera a la tarjeta de memoria.
+- Dos paquetes de ejemplo nuevos hechos con IA, desactivados al principio:
+  *0.5.0: La montaña* (un valle de 100 casillas de ancho, un acantilado de
+  60 de alto y una cumbre grande: la cámara y el parallax) y *0.5.0: Las
+  cuevas* (un pozo hondo, una mina llena de objetos con un minero con el
+  que hablar, y una sala con dos gólems que disparan, para saltarlos o
+  derribarlos; todos sus textos en `texts/`). Sustituyen a los de la 0.4.0
+  (el pueblo y los monstruos): a partir de ahora cada versión trae sus
+  propios paquetes de ejemplo.
+- En los niveles grandes, los enemigos que disparan solo disparan cuando
+  están cerca de la vista.
+- Colisiones más sencillas: todo choca con el rectángulo de su dibujo
+  (antes, el jugador y las balas usaban la forma exacta de sus dibujos, y
+  la rueda giraba la suya). El jugador siempre se apoya en los pies, y se
+  ve mejor qué toca a qué. `MODDING.txt` trae el rectángulo de cada
+  imagen, para dibujar los personajes de los paquetes llenándolo; los
+  paquetes de ejemplo están dibujados así.
+
+Optimizaciones:
+
+- Las colisiones con las paredes son mucho más rápidas: el juego solo
+  mira las paredes cercanas a cada objeto y recuerda el tamaño de las que
+  no se mueven. Un nivel lleno de enemigos necesita unas 30 veces menos
+  trabajo, y los niveles originales unas 3 veces menos.
+- Los fondos se dibujan en tiras estrechas, que es como la PSP dibuja más
+  rápido: cada fotograma tarda mucho menos en todos los niveles y menús.
+- Los textos de los paquetes se leen con los niveles, y sus letras se
+  preparan entonces: una conversación ya no para el juego un momento para
+  leer la tarjeta de memoria o para dibujar una letra que aún no había
+  usado.
+- Tres imágenes de pantalla: el juego dibuja en una mientras la pantalla
+  enseña otra y la tercera espera, y es la propia pantalla la que las
+  cambia en el borrado vertical. Antes el fotograma siguiente podía
+  empezar a dibujarse mientras aún estaba en la pantalla, y una parte
+  parpadeaba.
+
+Bugs solucionados:
+
+- En algunos emuladores (PPSSPP en Android) IDIOMA no cambiaba el idioma:
+  el juego no conseguía listar la carpeta languages/. Ahora también busca
+  sus idiomas por su nombre (issue #4).
+
 ## 0.4.0-alpha
 
 **English**
