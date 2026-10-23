@@ -28,11 +28,15 @@ Everything that changed, version by version: [CHANGELOG](CHANGELOG.md).
 
 ---
 
-## 📋 0.5.1 — Menus
+## 🔨 0.5.1 — Menus *(in development)*
 
 - One texture for every button of the game, like Minecraft.
 - Menu backgrounds and icons apart from the buttons.
-- Volume control and button remapping in the options.
+- Volume control (sound effects and music) and button remapping in the
+  options; the buttons shown in the texts follow the remapping.
+- Moving with the analog stick, as an option (off by default).
+- In the pause, O goes back to the game, and restarting the level asks
+  first.
 - A faster texture packs screen.
 
 ## 📋 0.6.0 — Switches, keys and doors
@@ -92,11 +96,14 @@ Todo lo que cambió, versión a versión: [CHANGELOG](CHANGELOG.md).
 
 ---
 
-### 📋 0.5.1 — Menús
+### 🔨 0.5.1 — Menús *(en desarrollo)*
 
 - Una sola textura para todos los botones del juego, como en Minecraft.
 - Los fondos de los menús y los iconos, aparte de los botones.
-- Control de volumen y cambiar los botones en las opciones.
+- Control de volumen (efectos y música) y cambiar los botones en las
+  opciones; los botones que salen en los textos siguen a los cambiados.
+- Moverse con el joystick, como opción (desactivada al principio).
+- En la pausa, ○ vuelve al juego, y reiniciar el nivel pregunta antes.
 - Una pantalla de paquetes de texturas más rápida.
 
 ### 📋 0.6.0 — Interruptores, llaves y puertas
