@@ -46,6 +46,8 @@ Everything that changed, version by version: [CHANGELOG](CHANGELOG.md).
 - Coins and extra lives to collect.
 - A health bar for bosses.
 - Several textures of the game changed.
+- Music from the resource packs: one for the menus and another for the
+  levels (a level can have its own), with its own volume in the options.
 
 ## 📋 0.7.0 — Puzzles and mazes
 
@@ -117,6 +119,9 @@ Todo lo que cambió, versión a versión: [CHANGELOG](CHANGELOG.md).
 - Monedas y vidas extra para recoger.
 - Una barra de vida para los jefes.
 - Se han cambiado varias texturas del juego.
+- Música desde los paquetes de recursos: una para los menús y otra para
+  los niveles (un nivel puede tener la suya), con su propio volumen en las
+  opciones.
 
 ### 📋 0.7.0 — Puzles y laberintos
 
