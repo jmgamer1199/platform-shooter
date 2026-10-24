@@ -30,7 +30,7 @@ Everything that changed, version by version: [CHANGELOG](CHANGELOG.md).
 
 ## 🔨 0.5.1 — Menus *(in development)*
 
-- One texture for every button of the game, like Minecraft.
+- One texture for every button of the game.
 - Menu backgrounds and icons apart from the buttons.
 - Volume control (sound effects and music) and button remapping in the
   options; the buttons shown in the texts follow the remapping.
@@ -45,6 +45,7 @@ Everything that changed, version by version: [CHANGELOG](CHANGELOG.md).
 - Keys and coloured doors.
 - Coins and extra lives to collect.
 - A health bar for bosses.
+- Several textures of the game changed.
 
 ## 📋 0.7.0 — Puzzles and mazes
 
@@ -61,6 +62,9 @@ Everything that changed, version by version: [CHANGELOG](CHANGELOG.md).
 ## 📋 0.9.0 — Animated player and new sounds
 
 - An animated player: standing, walking, jumping and falling.
+- Any picture of the game can be animated: frames one under another,
+  and a text file next to it to control the animation (speed, order,
+  how long each frame lasts, looping).
 - New sounds: jump, shoot, collect, doors, talk...
 
 All of it can be used from the resource packs, and is explained in
@@ -98,7 +102,7 @@ Todo lo que cambió, versión a versión: [CHANGELOG](CHANGELOG.md).
 
 ### 🔨 0.5.1 — Menús *(en desarrollo)*
 
-- Una sola textura para todos los botones del juego, como en Minecraft.
+- Una sola textura para todos los botones del juego.
 - Los fondos de los menús y los iconos, aparte de los botones.
 - Control de volumen (efectos y música) y cambiar los botones en las
   opciones; los botones que salen en los textos siguen a los cambiados.
@@ -112,6 +116,7 @@ Todo lo que cambió, versión a versión: [CHANGELOG](CHANGELOG.md).
 - Llaves y puertas de colores.
 - Monedas y vidas extra para recoger.
 - Una barra de vida para los jefes.
+- Se han cambiado varias texturas del juego.
 
 ### 📋 0.7.0 — Puzles y laberintos
 
@@ -129,6 +134,9 @@ Todo lo que cambió, versión a versión: [CHANGELOG](CHANGELOG.md).
 ### 📋 0.9.0 — Jugador animado y sonidos nuevos
 
 - Un jugador animado: quieto, andando, saltando y cayendo.
+- Cualquier imagen del juego se puede animar: fotogramas uno debajo de
+  otro y un archivo de texto al lado para controlar la animación
+  (velocidad, orden, cuánto dura cada fotograma, si se repite).
 - Sonidos nuevos: saltar, disparar, recoger, puertas, hablar...
 
 Todo se puede usar desde los paquetes de recursos, y está explicado en
