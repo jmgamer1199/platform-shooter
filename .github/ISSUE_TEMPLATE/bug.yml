@@ -59,8 +59,8 @@ body:
     attributes:
       label: "The game's log (log.txt) / El registro del juego (log.txt)"
       description: |
-        From version 0.5.0 on, the game writes everything that happens in log.txt, in its folder (PSP/GAME/.../platform-shooter/, next to EBOOT.PBP). Close the game with HOME after the bug, then drag log.txt into this box. If your version is older than 0.5.0, write "none".
-        Desde la versión 0.5.0, el juego apunta todo lo que pasa en log.txt, en su carpeta (PSP/GAME/.../platform-shooter/, junto a EBOOT.PBP). Cierra el juego con HOME después del fallo y arrastra log.txt a este cuadro. Si tu versión es anterior a la 0.5.0, escribe "none".
+        From version 0.5.0 on, the game writes everything that happens in log.txt: from 0.5.1 on it is data/cache/log.txt in its folder (PSP/GAME/.../platform-shooter/data/cache/), in 0.5.0 next to EBOOT.PBP. Close the game with HOME after the bug, then drag log.txt into this box. If your version is older than 0.5.0, write "none".
+        Desde la versión 0.5.0, el juego apunta todo lo que pasa en log.txt: desde la 0.5.1 es data/cache/log.txt en su carpeta (PSP/GAME/.../platform-shooter/data/cache/), en la 0.5.0 junto a EBOOT.PBP. Cierra el juego con HOME después del fallo y arrastra log.txt a este cuadro. Si tu versión es anterior a la 0.5.0, escribe "none".
       placeholder: "Drag log.txt here / Arrastra log.txt aquí"
     validations:
       required: true

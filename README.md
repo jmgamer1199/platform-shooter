@@ -48,7 +48,7 @@ from *Game > Memory Stick*.
 
 | Button | In the game | In the menus |
 |---|---|---|
-| D-pad / stick | move | choose (hold to keep moving) |
+| D-pad | move | choose (hold to keep moving) |
 | X | jump | accept |
 | R | shoot (from level 6, hold for 3 shots per second) | lower a pack's priority |
 | L | | raise a pack's priority |
@@ -57,11 +57,14 @@ from *Game > Memory Stick*.
 | Start | pause | |
 | Select | debug mode (FPS, memory, collision boxes) | debug mode |
 
+Jump, shoot, talk and pause can go on other buttons, and the analog stick
+can move too: OPTIONS > CONTROLS.
+
 ## What's in it
 
 - The 5 original levels and a new level 6 with enemies that shoot.
 - English and Spanish (more languages can be added as text files).
-- **Resource packs**, like Minecraft's: change any picture (PNG) or sound
+- **Resource packs**: change any picture (PNG) or sound
   (WAV) of the game, change the levels or add new ones (simple text files),
   several packs at once with priorities. Packs use the same format on every
   port of the game, and the game tells you what is wrong in a pack.
@@ -86,12 +89,16 @@ from *Game > Memory Stick*.
   main menu) or just a **texture pack** (also from the pause).
 - **Rules** in the packs: change the life, the jump, the gravity, the
   speeds and the fire rate to make an easy mode, a moon mode...
-- Language and packs are remembered.
-- A **log** of everything that happens (`log.txt`, next to `EBOOT.PBP`),
-  written on its own: send it with your bug reports.
+- **Options**: the volume of the sounds and the music, the buttons of
+  your choice for jumping, shooting, talking and pausing, and moving with
+  the analog stick. The menus' buttons are one picture that packs can
+  change.
+- Language, packs and options are remembered.
+- A **log** of everything that happens (`data/cache/log.txt`, in the
+  game's folder), written on its own: send it with your bug reports.
 
-**Next:** the menus, with one texture for all the buttons, a volume
-control and button remapping (0.5.1). See the [Roadmap](ROADMAP.md).
+**Next:** switches, keys and doors (0.6.0). See the
+[Roadmap](ROADMAP.md).
 
 How to make packs, levels and rules, add languages or change the font:
 `MODDING.txt` inside the game folder.
@@ -184,7 +191,7 @@ carpeta `platform-shooter` en `PSP/GAME/` de la Memory Stick y ábrelo desde
 
 | Botón | En el juego | En los menús |
 |---|---|---|
-| Cruceta / stick | moverse | elegir (mantén para seguir moviendo) |
+| Cruceta | moverse | elegir (mantén para seguir moviendo) |
 | X | saltar | aceptar |
 | R | disparar (desde el nivel 6; mantenlo para 3 disparos por segundo) | bajar la prioridad de un paquete |
 | L | | subir la prioridad de un paquete |
@@ -193,11 +200,14 @@ carpeta `platform-shooter` en `PSP/GAME/` de la Memory Stick y ábrelo desde
 | Start | pausa | |
 | Select | modo debug (FPS, memoria, cajas de colisión) | modo debug |
 
+Saltar, disparar, hablar y pausa pueden ir en otros botones, y el joystick
+también puede mover: OPCIONES > CONTROLES.
+
 ### Qué trae
 
 - Los 5 niveles originales y un nivel 6 nuevo con enemigos que disparan.
 - Inglés y español (se pueden añadir más idiomas con archivos de texto).
-- **Paquetes de recursos**, como los de Minecraft: cambia cualquier dibujo
+- **Paquetes de recursos**: cambia cualquier dibujo
   (PNG) o sonido (WAV) del juego, cambia los niveles o añade otros nuevos
   (archivos de texto sencillos), varios paquetes a la vez con prioridades.
   Los paquetes usan el mismo formato en todos los ports del juego, y el
@@ -226,12 +236,16 @@ carpeta `platform-shooter` en `PSP/GAME/` de la Memory Stick y ábrelo desde
 - **Reglas** en los paquetes: cambia la vida, el salto, la gravedad, las
   velocidades y la cadencia de disparo para hacer un modo fácil, un modo
   luna...
-- El idioma y los paquetes se recuerdan.
-- Un **registro (log)** de todo lo que pasa (`log.txt`, junto a
-  `EBOOT.PBP`), que se escribe solo: mándalo con tus avisos de fallos.
+- **Opciones**: el volumen de los sonidos y de la música, los botones que
+  quieras para saltar, disparar, hablar y pausar, y moverte con el
+  joystick. Los botones de los menús son un solo dibujo que los paquetes
+  pueden cambiar.
+- El idioma, los paquetes y las opciones se recuerdan.
+- Un **registro (log)** de todo lo que pasa (`data/cache/log.txt`, en la
+  carpeta del juego), que se escribe solo: mándalo con tus avisos de
+  fallos.
 
-**Lo próximo:** los menús, con una sola textura para todos los botones, un
-control de volumen y cambiar los botones (0.5.1). Mira el
+**Lo próximo:** interruptores, llaves y puertas (0.6.0). Mira el
 [Roadmap](ROADMAP.md).
 
 Cómo hacer paquetes, niveles y reglas, añadir idiomas o cambiar la fuente:

@@ -1,5 +1,202 @@
 # Changelog / Cambios
 
+## 0.5.1-alpha
+
+**English**
+
+New:
+
+- The menus draw their own buttons: one picture,
+  `gui/sprites/widget/button.png`, for every button of the game,
+  stretched to each one (in 9 parts, like the dialog box), with its word
+  written on it; and the pause's gear, `gui/sprites/icon/gear.png`. A
+  pack can also bring `button_highlighted.png` for the chosen button.
+  All the menus share one background, `gui/menu_background.png`, now
+  only the background (a pack can still bring one for a single menu,
+  like `gui/title/background.png`). A pack can change them all. Packs of
+  before, with the buttons painted on their menus, look as they did.
+- The pictures of a pack go in folders: `entity/` (the player, the enemies, the bullets),
+  `block/`, `environment/` (the level backgrounds), `gui/` (the menus)
+  and `font/` (the button symbols); the title screen phrases go in
+  `texts/splashes.txt`. The names of before keep working, so every pack
+  made until now works as it is (`MODDING.txt` has both lists).
+- The options have a volume for the sounds and one for the music (for
+  when there is music), in place of the sound on and off buttons:
+  left and right change them.
+- A CONTROLS screen in the options: jumping, shooting, talking and
+  pausing can each go on ✕ ○ □ △ L R or START (if another action had
+  that button, they swap), and "The buttons of always" puts them back.
+  The menus are always ✕ and ○. Moving with the analog stick is an
+  option there, off at first (before, it was always on).
+- The texts that show a button (the tutorials, the conversations, the
+  sign to talk) show the one chosen. In the texts of a pack, `{JUMP}`,
+  `{SHOOT}`, `{TALK}` and `{PAUSE}` are those buttons (`MODDING.txt`).
+- In the pause, ○ goes back to the game (before, it went to the title
+  screen, like MENU).
+- RESTART in the pause asks first ("Restart the level?", ✕ yes, ○ no),
+  so the level isn't lost by pressing it by mistake.
+- The main menu shows the game's version in the bottom left corner.
+- The log is now `data/cache/log.txt` (in the game's folder), and a
+  log changed after the game wrote it is noticed. Send that file with
+  your bug reports, as before.
+- The log says more:
+  - each bullet that hits the player or an enemy, and where;
+  - how many bullets hit the walls or left the level each second;
+  - the close calls (a bullet or an enemy that passes very near the
+    player without touching it) and how many there were in each level;
+  - how each enemy was defeated (a shot, or a jump on it) and where;
+  - where the player stands still for 10 seconds, and where they are
+    when the game says there is no progress;
+  - where the player is when pausing;
+  - each frame drawn into the picture that was on the screen, or a
+    picture that came late (a flicker on the screen);
+  - the step of the game of each key: with it, a game can be played
+    again exactly from its log, to see how a bug happened;
+  - the sounds: where each one comes from (the game or a pack), why
+    each hit sound played and where, which ones played each second and
+    how loud, and if something went wrong
+    (a sound with nothing to play, one cut off because 8 were playing,
+    a mix that came late and left a gap, or a mix too loud);
+  - how long the TEXTURE PACKS screen took to check the packs;
+  - each change of the volumes and of the controls.
+- The log never grows past 1 MB: when it gets there it starts again
+  with its first lines (the version, the PSP...), so it can't fill the
+  Memory Stick.
+
+Optimizations:
+
+- The menus use one picture for their background instead of five: about
+  2 MB less memory in use (on a PSP-1000 the game has 19 MB).
+- The texts of the menus are drawn about 30 times faster. On a PSP-1000
+  the TEXTURE PACKS screen went at 10 to 30 FPS; now it goes at 60, and
+  at about 30 during the first seconds, while it checks the packs.
+- Leaving TEXTURE PACKS after changing packs only loads again the
+  pictures that changed, and the game no longer looks for every picture
+  in every pack one by one. On a PSP-1000 it took 5.5 to 10 s; now, turning
+  off a pack that changes almost every picture takes about 4.5 s, and
+  less when fewer pictures change.
+
+Fixed bugs:
+
+- The enemies' bullets went through the walls and the floor: now they
+  stop when they hit them, like the player's.
+- In the big levels the view went down at the edge of a gap you can jump
+  over, or of a step down of 3 squares, as if it were a drop. Now it
+  only looks down when there is nowhere to jump to ahead.
+- In the big levels the player's bullets went on off the screen and
+  killed enemies that couldn't be seen, and the enemies shot from just
+  outside the screen. Now the player's bullets are gone when they leave
+  the screen, and an enemy only shoots when it is on the screen.
+- With 8 sounds playing at once, a new one cut off the one that had
+  played longest instead of the one closest to its end.
+- Touching an enemy, the hit sound and the death were checked apart, a
+  pixel off: with an enemy just touching on the left the sound played
+  and nothing happened, and on the right the player died without the
+  sound. Now they always come together.
+- A bullet that hits the player had no sound: now it has the hit sound.
+
+**Español**
+
+Novedades:
+
+- Los menús dibujan sus propios botones: una sola imagen,
+  `gui/sprites/widget/button.png`, para todos los botones del juego,
+  estirada a cada uno (en 9 partes, como el cuadro de diálogo), con su
+  palabra escrita encima; y el engranaje de la pausa,
+  `gui/sprites/icon/gear.png`. Un paquete también puede traer
+  `button_highlighted.png` para el botón elegido. Todos los menús
+  comparten un solo fondo, `gui/menu_background.png`, que ahora es solo
+  el fondo (un paquete puede seguir trayendo uno para un menú, como
+  `gui/title/background.png`). Un paquete puede cambiarlos todos. Los
+  paquetes de antes, con los botones pintados en sus menús, se ven como
+  antes.
+- Los dibujos de un paquete van en carpetas: `entity/` (el jugador, los
+  enemigos, las balas), `block/`, `environment/` (los fondos de los
+  niveles), `gui/` (los menús) y `font/` (los símbolos de los botones);
+  las frases de la pantalla de inicio van en `texts/splashes.txt`. Los
+  nombres de antes siguen funcionando, así que todos los paquetes hechos
+  hasta ahora funcionan tal cual (`MODDING.txt` tiene las dos listas).
+- Las opciones tienen un volumen para los sonidos y otro para la música
+  (para cuando haya música), en lugar de los botones de sonido sí y no:
+  izquierda y derecha los cambian.
+- Una pantalla de CONTROLES en las opciones: saltar, disparar, hablar y
+  pausa pueden ir cada una en ✕ ○ □ △ L R o START (si otra acción tenía
+  ese botón, se intercambian), y "Los botones de siempre" los devuelve.
+  Los menús son siempre ✕ y ○. Moverse con el joystick es una opción de
+  ahí, desactivada al principio (antes estaba siempre activado).
+- Los textos que enseñan un botón (las ayudas, las conversaciones, el
+  aviso para hablar) enseñan el elegido. En los textos de un paquete,
+  `{JUMP}`, `{SHOOT}`, `{TALK}` y `{PAUSE}` son esos botones
+  (`MODDING.txt`).
+- En la pausa, ○ vuelve al juego (antes iba a la pantalla de inicio,
+  como MENÚ).
+- REINICIAR en la pausa pregunta antes ("¿Reiniciar el nivel?", ✕ sí,
+  ○ no), para no perder el nivel por pulsarlo sin querer.
+- El menú principal muestra la versión del juego abajo a la izquierda.
+- El registro ahora es `data/cache/log.txt` (en la carpeta del
+  juego), y si se cambia después de que el juego lo escriba, se nota.
+  Mándalo con tus avisos de fallos, como antes.
+- El registro cuenta más cosas:
+  - cada bala que le da al jugador o a un enemigo, y dónde;
+  - cuántas balas chocan con las paredes o salen del nivel cada segundo;
+  - los "por los pelos" (una bala o un enemigo que pasa muy cerca del
+    jugador sin tocarlo) y cuántos hubo en cada nivel;
+  - cómo se mató a cada enemigo (de un disparo o saltándole encima) y
+    dónde;
+  - dónde se queda quieto el jugador 10 segundos, y dónde está cuando el
+    juego dice que no avanza;
+  - dónde está el jugador al poner la pausa;
+  - cada imagen que se dibujó sobre la que se estaba viendo, o que llegó
+    tarde (un parpadeo en la pantalla);
+  - el paso del juego de cada botón: con él, una partida se puede
+    repetir exactamente a partir de su registro, para ver cómo pasó un
+    fallo;
+  - los sonidos: de dónde sale cada uno (del juego o de un paquete), por
+    qué sonó cada golpe y dónde, cuáles sonaron cada segundo y con qué
+    fuerza, y si algo fue mal (un
+    sonido sin nada que tocar, uno cortado porque sonaban 8, una mezcla
+    que llegó tarde y dejó un hueco, o una mezcla demasiado fuerte);
+  - cuánto tardó la pantalla de PAQUETES DE TEXTURAS en comprobar los
+    paquetes;
+  - cada cambio de los volúmenes y de los controles.
+- El registro nunca pasa de 1 MB: al llegar empieza de nuevo con sus
+  primeras líneas (la versión, la PSP...), así que no puede llenar la
+  Memory Stick.
+
+Optimizaciones:
+
+- Los menús usan una sola imagen de fondo en lugar de cinco: unos 2 MB
+  menos de memoria en uso (en una PSP-1000 el juego tiene 19 MB).
+- Los textos de los menús se dibujan unas 30 veces más rápido. En una
+  PSP-1000 la pantalla de PAQUETES DE TEXTURAS iba a entre 10 y 30 FPS;
+  ahora va a 60, y a unos 30 en los primeros segundos, mientras comprueba
+  los paquetes.
+- Al salir de PAQUETES DE TEXTURAS después de cambiar paquetes solo se
+  vuelven a cargar los dibujos que cambiaron, y el juego ya no busca
+  cada dibujo en cada paquete uno por uno. En una PSP-1000 tardaba entre
+  5,5 y 10 s; ahora, quitar un paquete que cambia casi todos los dibujos
+  tarda unos 4,5 s, y menos cuando cambian menos dibujos.
+
+Bugs solucionados:
+
+- Las balas de los enemigos atravesaban las paredes y el suelo: ahora se
+  paran al chocar con ellos, como las del jugador.
+- En los niveles grandes la vista bajaba al borde de un hueco que se
+  salta, o de un escalón de 3 casillas, como si fuera un precipicio.
+  Ahora solo mira hacia abajo cuando no hay a dónde saltar delante.
+- En los niveles grandes las balas del jugador seguían fuera de la
+  pantalla y mataban enemigos que no se veían, y los enemigos disparaban
+  desde justo fuera de la pantalla. Ahora las balas del jugador
+  desaparecen al salir de la pantalla, y un enemigo solo dispara cuando
+  está en ella.
+- Con 8 sonidos a la vez, uno nuevo cortaba el que llevaba más tiempo
+  sonando en lugar del que estaba más cerca de acabar.
+- Al tocar un enemigo, el sonido del golpe y la muerte se comprobaban
+  por separado, con un píxel de diferencia: con un enemigo rozando por la
+  izquierda sonaba el golpe y no pasaba nada, y por la derecha el jugador
+  moría sin el sonido. Ahora van siempre juntos.
+- Una bala que le da al jugador no tenía sonido: ahora suena el golpe.
+
 ## 0.5.0-alpha
 
 **English**
@@ -407,10 +604,10 @@ Bugs solucionados:
   version (`version`, raise it with each update) and the version of the
   game it was made with (`game_version`). OPTIONS > TEXTURE PACKS shows
   the version next to the name, and △ shows all three.
-- Splashes like Minecraft's: the title screen phrases are now the same in
-  every language, in `splashes.txt` of the `original` pack (one phrase per
-  line). A pack can change them with its own `splashes.txt`; △ shows how
-  many phrases it has. The language files no longer have phrases.
+- Title screen phrases: they are now the same in every language, in
+  `splashes.txt` of the `original` pack (one phrase per line). A pack can
+  change them with its own `splashes.txt`; △ shows how many phrases it
+  has. The language files no longer have phrases.
 - Faster TEXTURE PACKS screen: it shows at once and checks the packs in
   the background ("Checking..." until each one is done), opening each
   file once at most (half the files of before), and it remembers the
@@ -429,11 +626,11 @@ Bugs solucionados:
   versión del juego con la que se hizo (`game_version`). OPCIONES >
   PAQUETES DE TEXTURAS muestra la versión junto al nombre, y △ muestra las
   tres.
-- Frases como las de Minecraft: las frases de la pantalla de inicio ahora
-  son las mismas en todos los idiomas, en el `splashes.txt` del paquete
-  `original` (una frase por línea). Un paquete puede cambiarlas con su
-  propio `splashes.txt`; △ muestra cuántas frases tiene. Los archivos de
-  idioma ya no tienen frases.
+- Frases de la pantalla de inicio: ahora son las mismas en todos los
+  idiomas, en el `splashes.txt` del paquete `original` (una frase por
+  línea). Un paquete puede cambiarlas con su propio `splashes.txt`; △
+  muestra cuántas frases tiene. Los archivos de idioma ya no tienen
+  frases.
 - Pantalla de PAQUETES DE TEXTURAS más rápida: sale al momento y revisa
   los paquetes en segundo plano ("Comprobando..." hasta que acaba cada
   uno), abriendo cada archivo una vez como mucho (la mitad de archivos que

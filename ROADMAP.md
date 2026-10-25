@@ -17,6 +17,7 @@ on any PSP.
 
 | Version | Highlights |
 |---|---|
+| [0.5.1-alpha](../../releases/tag/v0.5.1-alpha) | Menus with one button texture, volume, button remapping, a faster packs screen |
 | [0.5.0-alpha](../../releases/tag/v0.5.0-alpha) | Big levels with a camera, all the texts in `texts/`, an automatic log |
 | [0.4.0-alpha](../../releases/tag/v0.4.0-alpha) | NPCs and dialogs, object options, two sample packs |
 | [0.3.0-alpha](../../releases/tag/v0.3.0-alpha) | Levels drawn as maps, enemies built from pieces |
@@ -28,18 +29,7 @@ Everything that changed, version by version: [CHANGELOG](CHANGELOG.md).
 
 ---
 
-## 🔨 0.5.1 — Menus *(in development)*
-
-- One texture for every button of the game.
-- Menu backgrounds and icons apart from the buttons.
-- Volume control (sound effects and music) and button remapping in the
-  options; the buttons shown in the texts follow the remapping.
-- Moving with the analog stick, as an option (off by default).
-- In the pause, O goes back to the game, and restarting the level asks
-  first.
-- A faster texture packs screen.
-
-## 📋 0.6.0 — Switches, keys and doors
+## 🔨 0.6.0 — Switches, keys and doors *(in development)*
 
 - Switches that make blocks appear and disappear.
 - Keys and coloured doors.
@@ -91,6 +81,7 @@ asegurarse de que funcione en cualquier PSP.
 
 | Versión | Lo más destacado |
 |---|---|
+| [0.5.1-alpha](../../releases/tag/v0.5.1-alpha) | Menús con una sola textura de botón, volumen, cambiar los botones, pantalla de paquetes más rápida |
 | [0.5.0-alpha](../../releases/tag/v0.5.0-alpha) | Niveles grandes con cámara, todos los textos en `texts/`, un registro automático |
 | [0.4.0-alpha](../../releases/tag/v0.4.0-alpha) | NPC y diálogos, opciones de los objetos, dos paquetes de ejemplo |
 | [0.3.0-alpha](../../releases/tag/v0.3.0-alpha) | Niveles dibujados como un mapa, enemigos montados con piezas |
@@ -102,17 +93,7 @@ Todo lo que cambió, versión a versión: [CHANGELOG](CHANGELOG.md).
 
 ---
 
-### 🔨 0.5.1 — Menús *(en desarrollo)*
-
-- Una sola textura para todos los botones del juego.
-- Los fondos de los menús y los iconos, aparte de los botones.
-- Control de volumen (efectos y música) y cambiar los botones en las
-  opciones; los botones que salen en los textos siguen a los cambiados.
-- Moverse con el joystick, como opción (desactivada al principio).
-- En la pausa, ○ vuelve al juego, y reiniciar el nivel pregunta antes.
-- Una pantalla de paquetes de texturas más rápida.
-
-### 📋 0.6.0 — Interruptores, llaves y puertas
+### 🔨 0.6.0 — Interruptores, llaves y puertas *(en desarrollo)*
 
 - Interruptores que hacen aparecer y desaparecer bloques.
 - Llaves y puertas de colores.
