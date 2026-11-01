@@ -36,8 +36,13 @@ Everything that changed, version by version: [CHANGELOG](CHANGELOG.md).
 - Coins and extra lives to collect.
 - A health bar for bosses.
 - Several textures of the game changed.
+- Materials for the solid blocks: grass, and the ones the resource packs
+  bring.
 - Music from the resource packs: one for the menus and another for the
   levels (a level can have its own), with its own volume in the options.
+- A credits screen, from the title screen and after the last level.
+- Five more languages: French, German, Italian, Dutch and Portuguese. The
+  game starts in the console's language.
 
 ## 📋 0.7.0 — Puzzles and mazes
 
@@ -100,9 +105,15 @@ Todo lo que cambió, versión a versión: [CHANGELOG](CHANGELOG.md).
 - Monedas y vidas extra para recoger.
 - Una barra de vida para los jefes.
 - Se han cambiado varias texturas del juego.
+- Materiales para los bloques sólidos: el césped, y los que traigan los
+  paquetes de recursos.
 - Música desde los paquetes de recursos: una para los menús y otra para
   los niveles (un nivel puede tener la suya), con su propio volumen en las
   opciones.
+- Una pantalla de créditos, desde la pantalla de inicio y al terminar el
+  último nivel.
+- Cinco idiomas más: francés, alemán, italiano, neerlandés y portugués. El
+  juego empieza en el idioma de la consola.
 
 ### 📋 0.7.0 — Puzles y laberintos
 
