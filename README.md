@@ -1,5 +1,9 @@
 # platform-shooter for PSP
 
+https://github.com/user-attachments/assets/ffcd165b-9f6e-4fda-a417-be2354bedf0b
+
+**Trailer of 0.6.0-alpha** · **Tráiler de la 0.6.0-alpha**
+
 **English** | [Español](#español)
 
 > 🗺️ **[Roadmap](ROADMAP.md)**: what's coming next · lo que viene
@@ -63,9 +67,11 @@ can move too: OPTIONS > CONTROLS.
 ## What's in it
 
 - The 5 original levels and a new level 6 with enemies that shoot.
-- English and Spanish (more languages can be added as text files).
+- English, Spanish, French, German, Italian, Dutch and Portuguese (more
+  languages can be added as text files).
 - **Resource packs**: change any picture (PNG) or sound
-  (WAV) of the game, change the levels or add new ones (simple text files),
+  (WAV) of the game, add music (OGG, from 0.6.0), change the levels or add
+  new ones (simple text files),
   several packs at once with priorities. Packs use the same format on every
   port of the game, and the game tells you what is wrong in a pack.
 - In the packs, **levels drawn as a map** with letters (no coordinates),
@@ -79,10 +85,10 @@ can move too: OPTIONS > CONTROLS.
   camera that follows the player and backgrounds that move slower than
   the level. All the texts of a pack (levels and conversations) in its
   `texts/` folder, in each language.
-- **Two sample packs**, off at first: *0.5.0: The mountain* (big levels and
-  the camera, 3 levels) and *0.5.0: The caves* (many objects and a miner
-  to talk to, 3 levels). Each one changes every picture and sound and has its own
-  levels. They are **made with AI, only to show what packs can do**: they
+- **Two sample packs**, off at first: *0.6.0: The temple* (switches, colour
+  blocks, keys and doors, 3 levels) and *0.6.0: The fortress* (coins, extra
+  lives and health bars, 3 levels). Each one has its own enemies, a
+  character to talk to, a material, music and levels. They are **made with AI (Claude Opus 5.5), only to show what packs can do**: they
   are not part of the original game. Turn one on in OPTIONS > TEXTURE
   PACKS and press PLAY.
 - A pack can say if it is a **mod** (it changes the game: only from the
@@ -93,26 +99,35 @@ can move too: OPTIONS > CONTROLS.
   your choice for jumping, shooting, talking and pausing, and moving with
   the analog stick. The menus' buttons are one picture that packs can
   change.
-- Language, packs and options are remembered.
+- The game starts in the console's (or the emulator's) language if it
+  has it; language, packs and options are remembered.
 - A **log** of everything that happens (`data/cache/log.txt`, in the
   game's folder), written on its own: send it with your bug reports.
 
-**Next:** switches, keys and doors (0.6.0). See the
+**Next:** a faster game on the PSP-1000 (0.6.1). See the
 [Roadmap](ROADMAP.md).
 
 How to make packs, levels and rules, add languages or change the font:
 `MODDING.txt` inside the game folder.
 
-## The original game and what was made with AI
+## The original game and what was made with AI (Claude Opus 5.5)
 
 **From the original game**, made by jmgamer1199 in 2017 with GameMaker:
-all the pictures (the player, the enemies, the wheel, the flag, the walls,
-the bullets and the backgrounds, including the drawings of the player
-shooting, which the original didn't use), the sounds, levels 1 to 5, and
-how the game plays: movement, jumps, enemies, collisions and menus. The
-ground and the platforms use, for now, the original wall picture.
+all the 2017 pictures (the player, the enemies, the wheel, the flag, the
+walls, the bullets and the backgrounds, including the drawings of the
+player shooting, which the original didn't use), the sounds, levels 1 to 5,
+and how the game plays: movement, jumps, enemies, collisions and menus.
+Since 0.6.0, several of those pictures have been replaced by Nebura Noctis's
+pixel art; the backgrounds of levels 2 to 6 and the walls are still the
+original ones. The ground and the platforms use, for now, the original wall
+picture.
 
-**Made with AI for the PSP port**, directed by jmgamer1199:
+**Pixel art** by [Nebura Noctis](https://deluxe-torte-5e3896.netlify.app/):
+since 0.6.0, the game's own look. The player (standing and shooting), the
+walking enemy, the wheel, the flag, the bullet, the menu button, the
+level 1 background, the black menu background and the grass of the ground.
+
+**Made with Claude (Opus 5.5) for the PSP port**, directed by jmgamer1199:
 - all the code of the port: the game rewritten in C for the PSP from the
   original GameMaker code, plus its tools and tests;
 - level 6 and the shooting;
@@ -125,8 +140,8 @@ ground and the platforms use, for now, the original wall picture.
   button symbols, the icon of the template pack and the new buttons drawn
   on the menus (the gear and TEXTURE PACKS). The menu backgrounds are the
   original ones, with their painted text removed;
-- the sample packs (sample_mountain and sample_caves): their
-  levels, characters, enemies, texts and pictures;
+- the sample packs (sample_temple and sample_fortress): their
+  levels, characters, enemies, texts, pictures, sounds and music;
 - these documents.
 
 **From others**: the Lilita One font (Juan Montoreano, SIL Open Font
@@ -206,9 +221,11 @@ también puede mover: OPCIONES > CONTROLES.
 ### Qué trae
 
 - Los 5 niveles originales y un nivel 6 nuevo con enemigos que disparan.
-- Inglés y español (se pueden añadir más idiomas con archivos de texto).
+- Inglés, español, francés, alemán, italiano, neerlandés y portugués (se
+  pueden añadir más idiomas con archivos de texto).
 - **Paquetes de recursos**: cambia cualquier dibujo
-  (PNG) o sonido (WAV) del juego, cambia los niveles o añade otros nuevos
+  (PNG) o sonido (WAV) del juego, añade música (OGG, desde la 0.6.0),
+  cambia los niveles o añade otros nuevos
   (archivos de texto sencillos), varios paquetes a la vez con prioridades.
   Los paquetes usan el mismo formato en todos los ports del juego, y el
   juego te dice qué tiene mal un paquete.
@@ -223,12 +240,13 @@ también puede mover: OPCIONES > CONTROLES.
   de alto, con una cámara que sigue al jugador y fondos que se mueven más
   despacio que el nivel. Todos los textos de un paquete (niveles y
   conversaciones) en su carpeta `texts/`, en cada idioma.
-- **Dos paquetes de ejemplo**, desactivados al principio: *0.5.0: La
-  montaña* (niveles grandes y la cámara, 3 niveles) y *0.5.0: Las cuevas*
-  (muchos objetos y un minero con el que hablar, 3 niveles). Están **hechos con
+- **Dos paquetes de ejemplo**, desactivados al principio: *0.6.0: El
+  templo* (interruptores, bloques de colores, llaves y puertas, 3 niveles)
+  y *0.6.0: La fortaleza* (monedas, vidas extra y barras de vida, 3
+  niveles). Están **hechos con
   IA, solo para enseñar lo que pueden hacer los paquetes**: no son parte
-  del juego original. Cada uno cambia todos los dibujos y sonidos y tiene
-  sus propios niveles. Activa uno en OPCIONES > PAQUETES DE TEXTURAS y
+  del juego original. Cada uno trae sus enemigos, un personaje con el que
+  hablar, un material, música y sus propios niveles. Activa uno en OPCIONES > PAQUETES DE TEXTURAS y
   pulsa JUGAR.
 - Un paquete puede decir si es un **mod** (cambia el juego: solo desde el
   menú principal) o solo un **paquete de texturas** (también desde la
@@ -240,27 +258,36 @@ también puede mover: OPCIONES > CONTROLES.
   quieras para saltar, disparar, hablar y pausar, y moverte con el
   joystick. Los botones de los menús son un solo dibujo que los paquetes
   pueden cambiar.
-- El idioma, los paquetes y las opciones se recuerdan.
+- El juego empieza en el idioma de la consola (o del emulador) si lo
+  tiene; el idioma, los paquetes y las opciones se recuerdan.
 - Un **registro (log)** de todo lo que pasa (`data/cache/log.txt`, en la
   carpeta del juego), que se escribe solo: mándalo con tus avisos de
   fallos.
 
-**Lo próximo:** interruptores, llaves y puertas (0.6.0). Mira el
+**Lo próximo:** un juego más rápido en la PSP-1000 (0.6.1). Mira el
 [Roadmap](ROADMAP.md).
 
 Cómo hacer paquetes, niveles y reglas, añadir idiomas o cambiar la fuente:
 `MODDING.txt` en la carpeta del juego.
 
-### El juego original y lo que se ha hecho con IA
+### El juego original y lo que se ha hecho con IA (Claude Opus 5.5)
 
 **Del juego original**, hecho por jmgamer1199 en 2017 con GameMaker: todos
-los dibujos (el jugador, los enemigos, la rueda, la bandera, las paredes,
-las balas y los fondos, también los del jugador disparando, que el
+los dibujos de 2017 (el jugador, los enemigos, la rueda, la bandera, las
+paredes, las balas y los fondos, también los del jugador disparando, que el
 original no usaba), los sonidos, los niveles 1 a 5, y cómo se juega:
-movimiento, saltos, enemigos, colisiones y menús. El suelo y las
-plataformas usan, de momento, el dibujo de pared original.
+movimiento, saltos, enemigos, colisiones y menús. Desde la 0.6.0, varios de
+esos dibujos se han sustituido por el pixel art de Nebura Noctis; los
+fondos de los niveles 2 a 6 y las paredes siguen siendo los originales. El
+suelo y las plataformas usan, de momento, el dibujo de pared original.
 
-**Hecho con IA para el port de PSP**, bajo la dirección de jmgamer1199:
+**Pixel art** de [Nebura Noctis](https://deluxe-torte-5e3896.netlify.app/):
+desde la 0.6.0, el aspecto propio del juego. El jugador (quieto y
+disparando), el enemigo que camina, la rueda, la bandera, la bala, el botón
+de los menús, el fondo del nivel 1, el fondo negro de los menús y el césped
+del suelo.
+
+**Hecho con Claude (Opus 5.5) para el port de PSP**, bajo la dirección de jmgamer1199:
 - todo el código del port: el juego reescrito en C para la PSP a partir
   del código original de GameMaker, y sus herramientas y pruebas;
 - el nivel 6 y el disparo;
@@ -274,8 +301,8 @@ plataformas usan, de momento, el dibujo de pared original.
   símbolos de los botones, el icono del paquete plantilla y los botones
   nuevos dibujados en los menús (el engranaje y PAQUETES DE TEXTURAS). Los
   fondos de los menús son los originales, con su texto pintado borrado;
-- los paquetes de ejemplo (sample_mountain y sample_caves): sus
-  niveles, personajes, enemigos, textos y dibujos;
+- los paquetes de ejemplo (sample_temple y sample_fortress): sus
+  niveles, personajes, enemigos, textos, dibujos, sonidos y música;
 - estos documentos.
 
 **De otros**: la fuente Lilita One (Juan Montoreano, SIL Open Font

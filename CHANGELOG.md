@@ -1,5 +1,186 @@
 # Changelog / Cambios
 
+## 0.6.0-alpha (not released yet / sin publicar)
+
+**English**
+
+New:
+
+- The game's look is now pixel art: a new player (standing and
+  shooting), a new walking enemy, spinning wheel, flag, bullet, menu
+  button, level 1 background and a black menu background. The game draws
+  its own pictures with sharp pixels. The player is shown pixel by pixel,
+  exactly as drawn, and when it shoots only its arm changes. The bullet
+  is drawn twice as big (each of its pixels 2x2), with the same shape; it
+  collides as before.
+- The player collides with the new drawing: it is about 1 square wide
+  (it was 2) and a bit taller, and its bullets come out of its gun,
+  about 1.9 squares high (it was 1.3). An enemy of the packs that must be shot from the
+  ground needs size = 1.8 or more. A pack made before 0.6.0 with its own
+  player keeps the old collision box and gun, so it plays the same.
+- Materials for the solid blocks. A material is one picture with 15
+  pieces (edges, corners, platform ends, inner corners), and the game
+  puts the right piece on each square by looking at the squares around
+  it. The game brings grass, and the ground of its levels is now grass. A pack
+  can bring its own in `blocks/<name>/`, use them in its maps with the
+  numbers 1 to 9, or make one the material of a whole level with
+  `blocks = <name>`. `MODDING.txt` explains it.
+- Switches, colour blocks, keys and doors, coins and extra lives, drawn
+  in the maps with `! % ~ & | * +`. A switch turns its colour on: the
+  blocks of that colour appear (`%`) or disappear (`~`). It is used with
+  △ (or touched, or shot, if the level says so) and goes on and off each
+  time (or stays on, or stays on for a few seconds, if the level says so); the exit can
+  wait for one (`exit_switch`). A key opens a door of its colour, with △. There are 4 colours
+  (red, blue, green and yellow), given with `colors:` under the map. The
+  coins are counted at the top left of the screen; an extra life saves
+  the player once (not from a fall). `MODDING.txt` explains it.
+- A health bar for the bosses: an enemy with `health_bar = yes` shows
+  its name and the life it has left at the bottom of the screen once the
+  player comes near it.
+- CREDITS, small in the bottom right corner of the title screen: the
+  credits come up the screen (✕ makes
+  them faster, ○ goes back). They also come after the last level,
+  before the game starts again. The pixel art is by Nebura Noctis, the
+  port is made with Claude (Opus 5.5).
+- The coins and extra lives go on from a level to the next one (dying
+  starts the level with what you had when you came in), and the pause
+  no longer clears the level's switches, keys and coins.
+- Two new sample packs, made with AI: *0.6.0: The temple* (switches,
+  colour blocks, keys and doors) and *0.6.0: The fortress* (coins, extra
+  lives and health bars). Each one with 3 levels, its enemies, a
+  character, a material and its music, and texts in the 7 languages.
+  They replace those of 0.5.0.
+- Five more languages, those of the PSP with Latin letters: French,
+  German, Italian, Dutch and Portuguese (translated with Claude). The
+  texts of the levels and the sample packs too.
+- The game starts in the console's or the emulator's language (if it has
+  it), until you choose one in OPTIONS > LANGUAGE. The log says which one
+  the console has.
+- Music. A pack can bring it in `sounds/music/`, as OGG Vorbis files:
+  `menu.ogg` plays in the menus and `game.ogg` in the levels, and a level
+  can have its own (`music = forest.ogg` in its file). It is read little
+  by little from the Memory Stick, starts again at the end, stops in the
+  pause and goes on where it was. Its volume is OPTIONS > MUSIC. The game
+  itself still has no music, like the original. `MODDING.txt` explains it.
+- The loading screen moves: the dots of "Loading..." come and go, and at
+  the bottom your numbers take turns: the times you died or jumped, the
+  bullets you fired, the enemies you defeated, the levels you completed
+  or the time you played. The game counts them in
+  `stats.txt`, next to `config.txt`, and saves them when a level ends,
+  when you go back to the menu and when the game closes.
+- TEXTURE PACKS warns about music that isn't OGG Vorbis and about a level
+  whose music isn't in the pack.
+- The log says which music plays, from which pack, and when a mix found
+  no music ready (a gap).
+- The log starts before the loading screen and says how it went, writes
+  the texts on the screen each time they change (and if one doesn't fit),
+  and says when the game before didn't close well (switched off, hung or
+  crashed), with the last line of its log.
+- The log says which custom firmware runs (ARK-4 or ARK-5, with its
+  version).
+
+Optimizations:
+
+- Faster loading: the game's backgrounds come at the PSP's size, and
+  the packs' backgrounds are resized much faster (in the emulator,
+  starting goes from 2.3 s to 0.7 s).
+
+Fixed bugs:
+
+- The log could write a PSP-3000 as a PSP-1000: it now says the model as
+  the custom firmware tells it.
+
+**Español**
+
+Novedades:
+
+- El juego ahora es pixel art: un jugador nuevo (quieto y disparando), y
+  nuevos el enemigo que anda, la rueda, la bandera, la bala, el botón de
+  los menús, el fondo del nivel 1 y un fondo negro para los menús. El
+  juego dibuja sus propios dibujos con píxeles nítidos. El jugador se ve
+  píxel a píxel, tal y como está dibujado, y al disparar solo cambia su
+  brazo. La bala se dibuja el doble de grande (cada píxel suyo, 2x2), con
+  la misma forma; choca como antes.
+- El jugador choca con su dibujo nuevo: mide más o menos 1 casilla de
+  ancho (antes 2) y es algo más alto, y sus balas salen de la pistola, a
+  unas 1,9 casillas de alto (antes 1,3). Un enemigo de los paquetes al que hay que disparar
+  desde el suelo necesita size = 1.8 o más. Un paquete hecho antes de la
+  0.6.0 con su propio jugador mantiene la caja de choque y la pistola de
+  antes, así que se juega igual.
+- Materiales para los bloques sólidos. Un material es un dibujo con 15
+  piezas (bordes, esquinas, puntas de plataforma, esquinas interiores), y
+  el juego pone en cada casilla la pieza que toca mirando las de
+  alrededor. El juego trae el césped, y el suelo de sus niveles ahora es de
+  césped. Un paquete puede traer los suyos en `blocks/<nombre>/`, usarlos
+  en sus mapas con los números del 1 al 9, o hacer uno el material de
+  todo un nivel con `blocks = <nombre>`. `MODDING.txt` lo explica.
+- Interruptores, bloques de colores, llaves y puertas, monedas y vidas
+  extra, dibujados en los mapas con `! % ~ & | * +`. Un interruptor
+  enciende su color: los bloques de ese color aparecen (`%`) o
+  desaparecen (`~`). Se usa con △ (o tocándolo, o disparándole, si el
+  nivel lo dice) y se enciende y se apaga cada vez (o se queda encendido,
+  o está encendido unos segundos, si el nivel lo dice); la salida puede esperar a
+  uno (`exit_switch`). Una llave abre una puerta de su color, con △. Hay 4 colores (rojo, azul, verde y
+  amarillo), que se ponen con `colors:` debajo del mapa. Las monedas se
+  cuentan arriba a la izquierda de la pantalla; una vida extra salva al
+  jugador una vez (no de una caída). `MODDING.txt` lo explica.
+- Barra de vida para los jefes: un enemigo con `health_bar = yes` enseña
+  su nombre y la vida que le queda abajo de la pantalla cuando el jugador
+  se acerca.
+- CRÉDITOS, pequeño en la esquina de abajo a la derecha de la pantalla de
+  inicio: los créditos suben por la pantalla
+  (✕ los acelera, ○ vuelve). También salen al terminar el último nivel,
+  antes de volver al inicio. El pixel art es de Nebura Noctis, el port
+  está hecho con Claude (Opus 5.5).
+- Las monedas y las vidas extra pasan de un nivel al siguiente (morir
+  empieza el nivel con lo que tenías al entrar), y la pausa ya no borra
+  los interruptores encendidos, las llaves ni las monedas del nivel.
+- Dos paquetes de ejemplo nuevos, hechos con IA: *0.6.0: El templo*
+  (interruptores, bloques de colores, llaves y puertas) y *0.6.0: La
+  fortaleza* (monedas, vidas extra y barras de vida). Cada uno con 3
+  niveles, sus enemigos, un personaje, un material y su música, y textos
+  en los 7 idiomas. Sustituyen a los de la 0.5.0.
+- Cinco idiomas más, los de la PSP con nuestras letras: francés, alemán,
+  italiano, neerlandés y portugués (traducidos con Claude). Los textos de
+  los niveles y los de los paquetes de ejemplo también.
+- El juego empieza en el idioma de la consola o del emulador (si tiene ese
+  idioma), hasta que elijas uno en OPCIONES > IDIOMA. El registro dice
+  cuál es el de la consola.
+- Música. Un paquete puede traerla en `sounds/music/`, en archivos OGG
+  Vorbis: `menu.ogg` suena en los menús y `game.ogg` en los niveles, y un
+  nivel puede tener la suya (`music = bosque.ogg` en su archivo). Se lee
+  poco a poco de la Memory Stick, vuelve a empezar al terminar, se para
+  en la pausa y sigue donde estaba. Su volumen es OPCIONES > MÚSICA. El
+  juego sigue sin música propia, como el original. `MODDING.txt` lo
+  explica.
+- La pantalla de carga se mueve: los puntos de "Cargando..." aparecen y
+  desaparecen, y abajo van saliendo tus números: las veces que has muerto
+  o saltado, las balas que has disparado, los enemigos que has
+  eliminado, los niveles que has completado o el tiempo que llevas
+  jugando. El juego los cuenta en `stats.txt`, junto a `config.txt`, y
+  los guarda al acabar un nivel, al volver al menú y al cerrar el juego.
+- PAQUETES DE TEXTURAS avisa de la música que no es OGG Vorbis y de un
+  nivel cuya música no está en el paquete.
+- El registro dice qué música suena, de qué paquete, y cuándo una mezcla
+  no encontró música lista (un corte).
+- El registro empieza antes de la pantalla de carga y dice cómo fue,
+  apunta los textos de la pantalla cada vez que cambian (y si alguno no
+  cabe), y dice cuándo la partida anterior no se cerró bien (apagada,
+  colgada o cerrada de golpe), con la última línea de su registro.
+- El registro dice qué custom firmware hay (ARK-4 o ARK-5, con su
+  versión).
+
+Optimizaciones:
+
+- Carga más rápido: los fondos del juego ya vienen al tamaño de la PSP, y
+  los fondos de los paquetes se cambian de tamaño mucho más deprisa (en
+  el emulador, el arranque pasa de 2,3 s a 0,7 s).
+
+Bugs solucionados:
+
+- El registro podía poner una PSP-3000 como PSP-1000: ahora dice el
+  modelo tal como lo dice el custom firmware.
+
 ## 0.5.1-alpha
 
 **English**

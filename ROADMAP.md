@@ -17,6 +17,7 @@ on any PSP.
 
 | Version | Highlights |
 |---|---|
+| [0.6.0-alpha](../../releases/tag/v0.6.0-alpha) | Official pixel art, music, switches, keys and doors, coins and lives, boss health bars, 7 languages |
 | [0.5.1-alpha](../../releases/tag/v0.5.1-alpha) | Menus with one button texture, volume, button remapping, a faster packs screen |
 | [0.5.0-alpha](../../releases/tag/v0.5.0-alpha) | Big levels with a camera, all the texts in `texts/`, an automatic log |
 | [0.4.0-alpha](../../releases/tag/v0.4.0-alpha) | NPCs and dialogs, object options, two sample packs |
@@ -29,20 +30,12 @@ Everything that changed, version by version: [CHANGELOG](CHANGELOG.md).
 
 ---
 
-## 🔨 0.6.0 — Switches, keys and doors *(in development)*
+## 🔨 0.6.1 — Faster *(in development)*
 
-- Switches that make blocks appear and disappear.
-- Keys and coloured doors.
-- Coins and extra lives to collect.
-- A health bar for bosses.
-- Several textures of the game changed.
-- Materials for the solid blocks: grass, and the ones the resource packs
-  bring.
-- Music from the resource packs: one for the menus and another for the
-  levels (a level can have its own), with its own volume in the options.
-- A credits screen, from the title screen and after the last level.
-- Five more languages: French, German, Italian, Dutch and Portuguese. The
-  game starts in the console's language.
+- Smoother levels with many objects on the PSP-1000.
+- Pack pictures get ready faster when the game starts and when packs
+  change.
+- A smoother packs screen.
 
 ## 📋 0.7.0 — Puzzles and mazes
 
@@ -86,6 +79,7 @@ asegurarse de que funcione en cualquier PSP.
 
 | Versión | Lo más destacado |
 |---|---|
+| [0.6.0-alpha](../../releases/tag/v0.6.0-alpha) | Pixel art oficial, música, interruptores, llaves y puertas, monedas y vidas, barras de vida de los jefes, 7 idiomas |
 | [0.5.1-alpha](../../releases/tag/v0.5.1-alpha) | Menús con una sola textura de botón, volumen, cambiar los botones, pantalla de paquetes más rápida |
 | [0.5.0-alpha](../../releases/tag/v0.5.0-alpha) | Niveles grandes con cámara, todos los textos en `texts/`, un registro automático |
 | [0.4.0-alpha](../../releases/tag/v0.4.0-alpha) | NPC y diálogos, opciones de los objetos, dos paquetes de ejemplo |
@@ -98,22 +92,12 @@ Todo lo que cambió, versión a versión: [CHANGELOG](CHANGELOG.md).
 
 ---
 
-### 🔨 0.6.0 — Interruptores, llaves y puertas *(en desarrollo)*
+### 🔨 0.6.1 — Más rápido *(en desarrollo)*
 
-- Interruptores que hacen aparecer y desaparecer bloques.
-- Llaves y puertas de colores.
-- Monedas y vidas extra para recoger.
-- Una barra de vida para los jefes.
-- Se han cambiado varias texturas del juego.
-- Materiales para los bloques sólidos: el césped, y los que traigan los
-  paquetes de recursos.
-- Música desde los paquetes de recursos: una para los menús y otra para
-  los niveles (un nivel puede tener la suya), con su propio volumen en las
-  opciones.
-- Una pantalla de créditos, desde la pantalla de inicio y al terminar el
-  último nivel.
-- Cinco idiomas más: francés, alemán, italiano, neerlandés y portugués. El
-  juego empieza en el idioma de la consola.
+- Niveles con muchos objetos más fluidos en la PSP-1000.
+- Los dibujos de los paquetes se preparan más deprisa al arrancar y al
+  cambiar de paquetes.
+- Una pantalla de paquetes más fluida.
 
 ### 📋 0.7.0 — Puzles y laberintos
 
