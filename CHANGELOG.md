@@ -1,6 +1,6 @@
 # Changelog / Cambios
 
-## 0.6.0-alpha (not released yet / sin publicar)
+## 0.6.0-alpha
 
 **English**
 
