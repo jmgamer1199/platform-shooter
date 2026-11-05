@@ -7,6 +7,8 @@ https://github.com/user-attachments/assets/ffcd165b-9f6e-4fda-a417-be2354bedf0b
 **English** | [Español](#español)
 
 > 🗺️ **[Roadmap](ROADMAP.md)**: what's coming next · lo que viene
+>
+> 🎮 **[itch.io](https://jmgames9.itch.io/platform-shooter)**: also here · también aquí
 
 Native PlayStation Portable port of **platform-shooter**, a platform game
 by **jmgamer1199**, first made with GameMaker in 2017. Written in C for the
