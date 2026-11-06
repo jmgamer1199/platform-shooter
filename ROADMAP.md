@@ -36,7 +36,6 @@ Everything that changed, version by version: [CHANGELOG](CHANGELOG.md).
 - Pack pictures get ready faster when the game starts and when packs
   change.
 - A smoother packs screen.
-- Some textures will be changed.
 
 ## 📋 0.7.0 — Puzzles and mazes
 
@@ -102,7 +101,6 @@ Todo lo que cambió, versión a versión: [CHANGELOG](CHANGELOG.md).
 - Los dibujos de los paquetes se preparan más deprisa al arrancar y al
   cambiar de paquetes.
 - Una pantalla de paquetes más fluida.
-- Se cambiarán algunas texturas.
 
 ### 📋 0.7.0 — Puzles y laberintos
 
