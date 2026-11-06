@@ -36,18 +36,21 @@ Everything that changed, version by version: [CHANGELOG](CHANGELOG.md).
 - Pack pictures get ready faster when the game starts and when packs
   change.
 - A smoother packs screen.
+- Some textures will be changed.
 
 ## 📋 0.7.0 — Puzzles and mazes
 
 - Boxes to push, pressure plates, timed switches and switches in order.
 - Riddles from the characters.
 - Mazes with doors that lead to other parts of the level, and dark levels.
+- Some textures will be changed.
 
 ## 📋 0.8.0 — Secrets and progress
 
 - Secret exits that lead to hidden levels.
 - Bonus and boss levels.
 - Saved progress, level select, timer and records.
+- Some textures will be changed.
 
 ## 📋 0.9.0 — Animated player and new sounds
 
@@ -56,6 +59,7 @@ Everything that changed, version by version: [CHANGELOG](CHANGELOG.md).
   and a text file next to it to control the animation (speed, order,
   how long each frame lasts, looping).
 - New sounds: jump, shoot, collect, doors, talk...
+- Some textures will be changed.
 
 All of it can be used from the resource packs, and is explained in
 `MODDING.txt`.
@@ -98,6 +102,7 @@ Todo lo que cambió, versión a versión: [CHANGELOG](CHANGELOG.md).
 - Los dibujos de los paquetes se preparan más deprisa al arrancar y al
   cambiar de paquetes.
 - Una pantalla de paquetes más fluida.
+- Se cambiarán algunas texturas.
 
 ### 📋 0.7.0 — Puzles y laberintos
 
@@ -105,12 +110,14 @@ Todo lo que cambió, versión a versión: [CHANGELOG](CHANGELOG.md).
 - Acertijos de los personajes.
 - Laberintos con puertas que llevan a otras partes del nivel, y niveles
   oscuros.
+- Se cambiarán algunas texturas.
 
 ### 📋 0.8.0 — Secretos y progreso
 
 - Salidas secretas que llevan a niveles ocultos.
 - Niveles de bonus y de jefe.
 - Progreso guardado, selección de nivel, cronómetro y récords.
+- Se cambiarán algunas texturas.
 
 ### 📋 0.9.0 — Jugador animado y sonidos nuevos
 
@@ -119,6 +126,7 @@ Todo lo que cambió, versión a versión: [CHANGELOG](CHANGELOG.md).
   otro y un archivo de texto al lado para controlar la animación
   (velocidad, orden, cuánto dura cada fotograma, si se repite).
 - Sonidos nuevos: saltar, disparar, recoger, puertas, hablar...
+- Se cambiarán algunas texturas.
 
 Todo se puede usar desde los paquetes de recursos, y está explicado en
 `MODDING.txt`.
