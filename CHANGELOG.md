@@ -1,5 +1,76 @@
 # Changelog / Cambios
 
+## 0.6.1-alpha
+
+**English**
+
+New:
+
+- This version is about speed on the PSP-1000. It has no new sample
+  packs: those of 0.6.0 are still the samples.
+- The log (`data/cache/log.txt`) says more about how fast each screen
+  runs, and notes it if the top of the picture flashes for a moment,
+  so a report of a problem with the log attached says where it happened.
+
+Optimizations:
+
+- The game draws many pictures, blocks and letters in one go instead of
+  one by one. The packs screen went from about 33 to 59 frames per
+  second on the PSP-1000, and the menus and levels have less work.
+- In a level bigger than the screen, the enemies, wheels and characters
+  that are far from the view sleep: they don't move or shoot until the
+  view comes near (an enemy that keeps the exit shut keeps it shut while
+  it sleeps). A level of 100x60 squares with 765 objects went from about
+  40 to 59 frames per second on the PSP-1000, also while shooting. The
+  game's own levels, of one screen, are not affected. `MODDING.txt`
+  explains it.
+- Loading is faster: the game's own pictures and those of the packs with
+  sharp pixels (`pixelated = yes`) skip a step they didn't need.
+- The first moment of each level no longer stops for a few hundredths of
+  a second: the statistics are saved while the game goes on.
+
+Fixed bugs:
+
+- The enemies and characters of a pack with sharp pixels
+  (`pixelated = yes`) were drawn smoothed, a little blurred. Now they
+  have sharp pixels like the rest of the pack.
+
+**Español**
+
+Novedades:
+
+- Esta versión es de velocidad en la PSP-1000. No trae paquetes de
+  ejemplo nuevos: los de la 0.6.0 siguen siendo los ejemplos.
+- El registro (`data/cache/log.txt`) dice más sobre lo rápido que va
+  cada pantalla, y apunta si la parte de arriba de la imagen parpadea un
+  momento, así un aviso de un problema con el registro adjunto dice
+  dónde pasó.
+
+Optimizaciones:
+
+- El juego dibuja muchos dibujos, bloques y letras de una vez en lugar
+  de uno a uno. La pantalla de paquetes pasó de unos 33 a 59 fotogramas
+  por segundo en la PSP-1000, y los menús y los niveles tienen menos
+  trabajo.
+- En un nivel más grande que la pantalla, los enemigos, ruedas y
+  personajes que están lejos de la vista duermen: no se mueven ni
+  disparan hasta que la vista se acerca (un enemigo que mantiene la
+  salida cerrada la sigue manteniendo mientras duerme). Un nivel de
+  100x60 casillas con 765 objetos pasó de unos 40 a 59 fotogramas por
+  segundo en la PSP-1000, también disparando. Los niveles del juego, de
+  una pantalla, no cambian. `MODDING.txt` lo explica.
+- Cargar es más rápido: los dibujos del juego y los de los paquetes con
+  píxeles nítidos (`pixelated = yes`) se saltan un paso que no
+  necesitaban.
+- El primer momento de cada nivel ya no se para unas centésimas de
+  segundo: las estadísticas se guardan mientras el juego sigue.
+
+Bugs solucionados:
+
+- Los enemigos y personajes de un paquete con píxeles nítidos
+  (`pixelated = yes`) se dibujaban suavizados, un poco borrosos. Ahora
+  tienen los píxeles nítidos como el resto del paquete.
+
 ## 0.6.0-alpha
 
 **English**
