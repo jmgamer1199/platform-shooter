@@ -1,5 +1,66 @@
 # Changelog / Cambios
 
+## 0.6.2-alpha
+
+**English**
+
+New:
+
+- The title screen shows the game's name, big at the top, with the yellow
+  phrase on its corner and the buttons a little lower. A pack can change
+  it (`GAME_TITLE` in its texts).
+- The log (`data/cache/log.txt`) says how long each music track took to
+  start.
+
+Optimizations:
+
+- The packs screen remembers the packs it has already checked (in
+  `data/cache/`): a pack is only checked again when one of its files
+  changes, or with a new version of the game. On the PSP-1000 the
+  checks took about 15 seconds for 10 packs every time the game started.
+  The screen shows the last results straight away while it looks for
+  changes, and "Checking..." only appears on a pack that changed.
+
+Fixed bugs:
+
+- When the music of a pack started (at the start of each level of a pack
+  with music, and in the menus after changing packs), the game stopped
+  for about a fifth of a second on the PSP-1000. Now the music gets
+  ready in the time the game leaves free.
+- The packs screen went in jerks while the packs were being checked
+  ("Checking..."): the checks took most of the time. Now they only use
+  the time left over in each frame.
+
+**Español**
+
+Novedades:
+
+- La pantalla de inicio muestra el nombre del juego en grande arriba, con
+  la frase amarilla en su esquina y los botones un poco más abajo. Un
+  paquete puede cambiarlo (`GAME_TITLE` en sus textos).
+- El registro (`data/cache/log.txt`) dice cuánto tardó en empezar cada
+  música.
+
+Optimizaciones:
+
+- La pantalla de paquetes recuerda los paquetes que ya ha comprobado (en
+  `data/cache/`): un paquete solo se vuelve a comprobar cuando cambia
+  alguno de sus archivos, o con una versión nueva del juego. En la
+  PSP-1000 la comprobación tardaba unos 15 segundos con 10 paquetes cada
+  vez que se iniciaba el juego. La pantalla muestra enseguida los últimos
+  resultados mientras busca cambios, y "Comprobando..." solo aparece en
+  un paquete que ha cambiado.
+
+Bugs solucionados:
+
+- Cuando empezaba la música de un paquete (al empezar cada nivel de un
+  paquete con música, y en los menús después de cambiar de paquetes), el
+  juego se paraba unas dos décimas de segundo en la PSP-1000. Ahora la
+  música se prepara en el tiempo que el juego deja libre.
+- La pantalla de paquetes iba a tirones mientras se comprobaban los
+  paquetes ("Comprobando..."): la comprobación se llevaba casi todo el
+  tiempo. Ahora solo usa el tiempo que sobra en cada fotograma.
+
 ## 0.6.1-alpha
 
 **English**

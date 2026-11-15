@@ -17,6 +17,7 @@ on any PSP.
 
 | Version | Highlights |
 |---|---|
+| [0.6.2-alpha](../../releases/tag/v0.6.2-alpha) | The game's name on the title screen, packs checked only when they change, no stops when the music starts |
 | [0.6.1-alpha](../../releases/tag/v0.6.1-alpha) | Faster on the PSP-1000: big levels, the packs screen and loading; sharp enemies in pixel art packs |
 | [0.6.0-alpha](../../releases/tag/v0.6.0-alpha) | Official pixel art, music, switches, keys and doors, coins and lives, boss health bars, 7 languages |
 | [0.5.1-alpha](../../releases/tag/v0.5.1-alpha) | Menus with one button texture, volume, button remapping, a faster packs screen |
@@ -76,6 +77,7 @@ asegurarse de que funcione en cualquier PSP.
 
 | Versión | Lo más destacado |
 |---|---|
+| [0.6.2-alpha](../../releases/tag/v0.6.2-alpha) | El nombre del juego en la pantalla de inicio, los paquetes solo se comprueban cuando cambian, sin parones al empezar la música |
 | [0.6.1-alpha](../../releases/tag/v0.6.1-alpha) | Más rápido en la PSP-1000: niveles grandes, pantalla de paquetes y carga; enemigos nítidos en los paquetes de pixel art |
 | [0.6.0-alpha](../../releases/tag/v0.6.0-alpha) | Pixel art oficial, música, interruptores, llaves y puertas, monedas y vidas, barras de vida de los jefes, 7 idiomas |
 | [0.5.1-alpha](../../releases/tag/v0.5.1-alpha) | Menús con una sola textura de botón, volumen, cambiar los botones, pantalla de paquetes más rápida |
